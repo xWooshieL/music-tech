@@ -32,12 +32,12 @@ $S_t = j$:
 \begin{frame}{HMM: вывод Forward-формулы (продолжение)}
 
 \textbf{Цепной разбор} по правилу произведения и марковскому свойству:
-\[
+\small\[
 P(O_{1:t+1}, S_t=j, S_{t+1}=i)
 = \underbrace{P(O_{1:t}, S_t=j)}_{=\alpha_t(j)}\;
   \underbrace{P(S_{t+1}=i \mid S_t=j)}_{=a_{j,i}}\;
   \underbrace{P(o_{t+1} \mid S_{t+1}=i)}_{=b_i(o_{t+1})}.
-\]
+\]\normalsize
 
 \bigskip
 
