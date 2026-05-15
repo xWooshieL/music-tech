@@ -1,0 +1,33 @@
+﻿% =====================================================================
+% Слайд 10 — Результаты baseline на синтетике
+% =====================================================================
+\begin{frame}{Результаты baseline на синтетике}
+  \footnotesize
+
+  Прогон трёх трекеров на синтетических сценариях:
+  \emph{ideal} (гамма ровно по нотам), \emph{rubato} (тот же pitch,
+  expressive timing), \emph{noisy} (лишние ноты, опечатки на полутон,
+  пропуски).
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.50\textwidth}
+    \centering
+    \input{figures/tikz/oltw-trajectory.tex}
+    \figcaption{OLTW: на \emph{ideal}/\emph{rubato} --- диагональ.
+             На \emph{noisy} --- ступеньки от форсированных шагов
+             RunCount.}
+
+    \column{0.50\textwidth}
+    \centering
+    \input{figures/tikz/alpha-heatmap.tex}
+    \figcaption{HMM $\alpha$-heatmap на \emph{noisy}: уверенность
+             «размывается» по соседним состояниям при ошибках.}
+  \end{columns}
+
+  \vspace{0.3em}
+  {\centering
+   На синтетике классические трекеры \rlhi{работают}.\\
+   Реальный challenge --- крупные пьесы ($\sim$4000 состояний) и
+   индивидуальный rubato концертного исполнителя.\par}
+\end{frame}
+

@@ -1,0 +1,25 @@
+% СХЕМА 8 — Предлагаемая архитектура (РИС. 1 тезисов)
+\begin{tikzpicture}[
+  every node/.style={font=\footnotesize},
+  box/.style={draw, thick, minimum height=0.95cm, minimum width=2.0cm,
+              align=center, rounded corners=1.5pt, fill=white, inner sep=3pt},
+  rlbox/.style={box, line width=1.0pt, fill=black!6},
+  arr/.style={-{Latex[length=2mm]}, thick},
+]
+  \node[box] (tr) at (0, 0)
+       {\textbf{Базовый трекер}\\\scriptsize HSMM + OLTW + anchor};
+
+  \node[rlbox] (pi) at (0, 2.1)
+       {\textbf{Политика} $\pi_\theta$\\\scriptsize MLP};
+  \draw[arr] (tr) -- node[right, font=\scriptsize] {$s_t$} (pi);
+
+  \node[box] (env) at (3.6, 0)
+       {\textbf{Среда}\\\scriptsize (рендерер)};
+  \draw[arr] (pi.east) -| node[above, near start, font=\scriptsize]
+       {$a_t$ (темп)} (env.north);
+
+  \node[rlbox] (rew) at (3.6, -2.1)
+       {\textbf{Награда} $r_t$\\\scriptsize формула (1)};
+  \draw[arr] (env) -- (rew);
+  \draw[arr] (rew.west) -| (pi.south);
+\end{tikzpicture}

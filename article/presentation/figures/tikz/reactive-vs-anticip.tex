@@ -1,0 +1,31 @@
+% СХЕМА 7 — Reactive vs anticipatory tempo control
+\begin{tikzpicture}[
+  every node/.style={font=\footnotesize},
+  arr/.style={-{Latex[length=2mm]}, thick},
+]
+  \draw[thick, arr] (0, 0) -- (7, 0) node[right] {$t$};
+
+  \foreach \x in {1,2,3,4,5,6} {
+    \draw[thick] (\x, -0.08) -- (\x, 0.08);
+  }
+  \node[below, font=\scriptsize] at (3, -0.2) {note $t$};
+  \node[below, font=\scriptsize] at (5, -0.2) {note $t{+}1$};
+
+  \draw[arr] (3, 0.15) -- (3, 0.9);
+  \node[font=\scriptsize, anchor=west] at (3.05, 0.7) {solist plays};
+  \draw[arr, dashed] (3, 0.9) -- (4.0, 0.9);
+  \draw[arr] (4.0, 0.9) -- (4.0, 0.15);
+  \node[font=\scriptsize, anchor=west] at (4.05, 1.0) {classic reacts ($t{+}\Delta$)};
+
+  \draw[arr] (3, -0.4) -- (3, -1.1);
+  \node[font=\scriptsize, anchor=west] at (3.05, -0.95) {RL predicts};
+  \draw[arr, dashed] (3, -1.1) -- (5.0, -1.1);
+  \draw[arr] (5.0, -1.1) -- (5.0, -0.4);
+  \node[font=\scriptsize, anchor=west] at (5.05, -1.25)
+       {orchestra plays at $t{+}300\,\text{ms}$};
+
+  \node[align=center, font=\scriptsize\itshape] at (1.0, 1.0)
+       {\textbf{Reactive}\\(baseline)};
+  \node[align=center, font=\scriptsize\itshape] at (1.0, -1.1)
+       {\textbf{Anticipatory}\\(RL)};
+\end{tikzpicture}

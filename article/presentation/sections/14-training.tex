@@ -1,0 +1,41 @@
+﻿% =====================================================================
+% Слайд 14 — Обучение: BC + PPO
+% =====================================================================
+\begin{frame}{Обучение: двустадийная схема BC $\to$ PPO}
+  \footnotesize\setlength{\abovedisplayskip}{2pt}
+  \setlength{\belowdisplayskip}{2pt}
+
+  PPO с нуля плохо стартует на сложной непрерывной задаче.
+  Используем стандартную схему \emph{BC $\to$ PPO $+$ KL}
+  (Sequence Tutor, Jaques 2017).
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.40\textwidth}
+    \textbf{Стадия A --- Behavior Cloning} на ASAP:
+    \begin{enumerate}\setlength{\itemsep}{0.2em}
+      \item Считаем оракульный темп
+            $\displaystyle a^{*}_t = \frac{\Delta\Phi_{\text{nominal}}}{\Delta\Phi_{\text{real}}}$
+            на скользящем окне.
+      \item Регрессия $s_t \mapsto a^{*}_t$ --- MLP $2\!\times\!64$.
+      \item Получаем стартовую политику $\pi_{\text{BC}}$.
+    \end{enumerate}
+
+    \vspace{0.6em}
+    \textbf{Стадия B --- PPO $+$ KL:}
+    \begin{enumerate}\setlength{\itemsep}{0.2em}
+      \item Среда \texttt{ScoreFollowingEnv} (Gymnasium) поверх
+            живого \texttt{HybridScoreFollower}.
+      \item Симулятор солиста (rubato по Repp 1995).
+      \item Награда $r_t$ из формулы\,(1).
+      \item KL-штраф
+            $\beta\,D_{\text{KL}}(\pi_\theta\,\|\,\pi_{\text{BC}})$,
+            чтобы не уехать в нефизичные регионы.
+    \end{enumerate}
+
+    \column{0.60\textwidth}
+    \centering
+    \input{figures/tikz/training-pipeline.tex}
+    \figcaption{ASAP даёт инициализацию, PPO дотачивает в симуляторе.}
+  \end{columns}
+\end{frame}
+

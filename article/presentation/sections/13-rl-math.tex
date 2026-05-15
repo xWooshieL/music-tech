@@ -1,0 +1,50 @@
+﻿% =====================================================================
+% Слайд 13 — Математика RL-слоя
+% =====================================================================
+\begin{frame}{Математика RL-слоя}
+  \footnotesize\setlength{\abovedisplayskip}{1pt}
+  \setlength{\belowdisplayskip}{1pt}
+
+  \textbf{Состояние} $s_t \in \mathbb{R}^{18}$ (не зависит от длины пьесы):
+  \[
+    s_t = \bigl(\,\hat\alpha_t,\ \tau_{t-K:t},\ e_{t-K:t},\
+                 \hat\varphi(t)/N\,\bigr)
+  \]
+  где $\hat\alpha_t$ --- 7-числовая сжатка HSMM-распределения
+  (max, entropy, argmax/$N$, top-3 mass, 3 относительных индекса),
+  $\tau_{t-K:t}$ --- последние $K$ оценок темпа, $e_{t-K:t}$ ---
+  эмиссионные ошибки, $\hat\varphi(t)/N$ --- относительная позиция.
+
+  \textbf{Действие:} $a_t \in [0.5,\, 2.0]$ --- темповый коэффициент.
+
+  \textbf{Награда} (формула\,(1) тезисов):
+  \[
+    r_t \;=\;
+      \underbrace{-\bigl|\,t^{\text{render}}_t - t^{\text{perf}}_t\bigr|}_{\text{рассинхр.}}
+      \;\;
+      \underbrace{-\,\lambda\,L_{\text{align}}(t)}_{\text{ошибка трекера}}
+      \;\;
+      \underbrace{-\,\mu\,(a_t - a_{t-1})^{2}}_{\text{резкий перепад}}
+  \]
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.42\textwidth}
+    \centering
+    \input{figures/tikz/state-encoder.tex}
+    \figcaption{Сборка $s_t$ из живого \texttt{HybridScoreFollower}.}
+
+    \column{0.58\textwidth}
+    \begin{itemize}\setlength{\itemsep}{0.2em}
+      \item Шаг 1: рассинхронизация рендера с исполнителем
+            --- основной сигнал.
+      \item Шаг 2: $L_{\text{align}}$ --- штраф за расхождение с
+            базовым трекером (мягкая регуляризация).
+      \item Шаг 3: $\mu (a_t - a_{t-1})^2$ ---  гладкость темпа,
+            чтобы оркестр не «дёргался».
+    \end{itemize}
+    \vspace{0.3em}
+    {\footnotesize $\lambda, \mu$ --- гиперпараметры, подбираемые
+     по PPO на ASAP.}
+  \end{columns}
+\end{frame}
+

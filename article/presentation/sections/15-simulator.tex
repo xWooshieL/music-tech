@@ -1,0 +1,45 @@
+﻿% =====================================================================
+% Слайд 15 — Симулятор солиста и рендера
+% =====================================================================
+\begin{frame}{Симулятор солиста и рендера}
+  \footnotesize
+
+  Для PPO нужны \emph{эпизоды} --- (state, action, reward) в больших
+  количествах. На реальных ASAP-записях их мало ($\sim$1000
+  исполнений). Решение --- симулятор.
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.50\textwidth}
+    \textbf{Симулятор солиста:}
+    \begin{itemize}\setlength{\itemsep}{0.2em}
+      \item база --- реальное ASAP-исполнение или партитура;
+      \item параметрическое rubato (Repp 1995): локальное растяжение
+            времени по фразам;
+      \item сэмплирование ошибок (вставка/замена/пропуск по
+            Nakamura 2015);
+      \item диверсивность $\Rightarrow$ агент не переобучается на
+            конкретных записях.
+    \end{itemize}
+
+    \vspace{0.4em}
+    \textbf{Симулятор рендера:}
+    \begin{itemize}\setlength{\itemsep}{0.2em}
+      \item детерминированное проигрывание orchestra MIDI с темпом
+            $a_t$;
+      \item $t^{\text{render}}_t$ берётся напрямую из времени
+            события после temp-rescaling.
+    \end{itemize}
+
+    \column{0.50\textwidth}
+    \centering
+    \input{figures/tikz/simulator-loop.tex}
+    \figcaption{Замкнутый цикл: симулятор $\to$ трекер $\to$ политика
+             $\to$ рендер $\to$ reward $\to$ обратно в политику.}
+  \end{columns}
+
+  \vspace{0.2em}
+  {\footnotesize
+   $t^{\text{render}}_t - t^{\text{perf}}_t$ доступен \rlhi{без}
+   аудио-записи оркестра~--- достаточно solo MIDI $+$ orchestra MIDI.}
+\end{frame}
+

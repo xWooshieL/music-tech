@@ -1,0 +1,33 @@
+% СХЕМА 5 — HSMM как HMM + длительности
+\begin{tikzpicture}[
+  every node/.style={font=\footnotesize},
+  state/.style={draw, thick, circle, minimum size=0.75cm, inner sep=0pt, fill=white},
+  arr/.style={-{Latex[length=2mm]}, thick},
+]
+  % States
+  \foreach \i in {0,1,2,3,4} {
+    \node[state] (s\i) at (\i*1.4, 0) {$s_{\i}$};
+  }
+
+  % advance arrows
+  \foreach \i [evaluate=\i as \j using int(\i+1)] in {0,1,2,3} {
+    \draw[arr] (s\i) -- (s\j);
+  }
+
+  % Tiny p_i(tau) duration curves above each state
+  \foreach \i in {0,1,2,3,4} {
+    \begin{scope}[shift={(\i*1.4, 1.0)}, scale=0.35]
+      \draw[->, thin] (-0.5, 0) -- (0.7, 0)
+            node[right, font=\tiny] {$\tau$};
+      \draw[->, thin] (-0.5, 0) -- (-0.5, 0.7);
+      \draw[thick, smooth, domain=-0.5:0.7, samples=30]
+        plot (\x, {0.55*exp(-12*(\x-0.1)^2)});
+    \end{scope}
+    \node[font=\tiny, above=24pt of s\i] {$p_{\i}(\tau)$};
+  }
+
+  % Caption
+  \node[align=center, font=\scriptsize\itshape] at (2.8, -1.0)
+       {HMM $+$ распределение длительности $p_i(\tau)$\\
+        $\Rightarrow$ переходы зависят от \texttt{elapsed} в state};
+\end{tikzpicture}

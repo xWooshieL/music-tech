@@ -1,0 +1,34 @@
+﻿% =====================================================================
+% Слайд 4 — Данные: формат партитуры
+% =====================================================================
+\begin{frame}[fragile]{Данные: формат партитуры}
+  \small
+  Партитура хранится в JSON-формате \texttt{score.json}. Одна запись
+  $=$ одно скрытое состояние HMM/HSMM (может быть аккордом).
+
+  \begin{columns}[T,onlytextwidth]
+    \column{0.45\textwidth}
+\begin{verbatim}
+{
+  "index": 0,
+  "pitches": [60, 64, 67],
+  "nominal_onset":    2.999,
+  "nominal_duration": 1.499
+}
+\end{verbatim}
+    \begin{itemize}\footnotesize
+      \item \texttt{generated\_dataset/} --- 4 синтетические пары;
+      \item \texttt{midi/library/rach\_solo/} --- Рахманинов,
+            \textbf{3791 state};
+      \item для RL --- импортер ASAP (Foscarin 2020): 222 пьесы,
+            1067 исполнений с note-level разметкой.
+    \end{itemize}
+
+    \column{0.55\textwidth}
+    \centering
+    \input{figures/tikz/score-pitch-time.tex}
+    \figcaption{Рахманинов, 1-я часть концерта №\,2. Каждая точка~---
+             состояние партитуры (верхняя нота аккорда).}
+  \end{columns}
+\end{frame}
+

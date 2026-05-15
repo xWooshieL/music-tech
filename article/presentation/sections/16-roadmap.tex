@@ -1,0 +1,34 @@
+﻿% =====================================================================
+% Слайд 16 — Что готово и план до защиты
+% =====================================================================
+\begin{frame}{Что готово и план до защиты}
+  \small
+
+  \textbf{Готово (наша работа поверх baseline):}
+  \begin{itemize}\footnotesize\setlength{\itemsep}{0.2em}
+    \item Архитектурная карта репозитория, слои в пакете
+          \texttt{musictech/} (13 подпакетов).
+    \item DTO под RL: \texttt{AlphaSummary}, \texttt{RLObservation},
+          \texttt{RLAction}, \texttt{RLReward}.
+    \item 9 ноутбуков с пошаговым разбором каждого компонента ---
+          от формата партитуры до сборки $s_t$ из живого
+          \texttt{HybridScoreFollower}.
+    \item Проверено: $s_t$ собирается из текущего стека за один
+          вызов, размерность 18, \emph{не зависит} от длины пьесы.
+  \end{itemize}
+
+  \textbf{План до защиты (приоритет):}
+  \begin{enumerate}\footnotesize\setlength{\itemsep}{0.2em}
+    \item Импортер ASAP в наш формат
+          (\texttt{musictech/datasets/asap.py}) --- \rlhi{блокер}
+          для всего обучения.
+    \item Вынос метрик в \texttt{musictech/evaluation/}
+          (alignment accuracy, onset-error, recovery latency).
+    \item Среда Gymnasium $+$ симулятор солиста.
+    \item BC на ASAP, потом PPO $+$ KL.
+  \end{enumerate}
+
+  \vspace{0.2em}
+  \centering
+  \input{figures/tikz/roadmap-timeline.tex}
+\end{frame}

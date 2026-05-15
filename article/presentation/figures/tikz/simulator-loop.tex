@@ -1,0 +1,20 @@
+% СХЕМА 11 — Замкнутый цикл симулятора
+\begin{tikzpicture}[
+  every node/.style={font=\scriptsize, align=center},
+  box/.style={draw, thick, minimum height=0.85cm, minimum width=1.9cm,
+              fill=white, rounded corners=1.5pt, inner sep=3pt},
+  rlbox/.style={box, line width=1pt, fill=black!4},
+  arr/.style={-{Latex[length=2mm]}, thick},
+]
+  \node[box]   (sim)   at (0, 1.5)    {Симулятор солиста\\(ASAP + rubato + errors)};
+  \node[box]   (tr)    at (4.5, 1.5)  {HybridScore\\Follower};
+  \node[rlbox] (pi)    at (4.5, -0.3) {$\pi_\theta$};
+  \node[box]   (rend)  at (0, -0.3)   {Симулятор рендера\\(orchestra MIDI $\times a_t$)};
+  \node[rlbox] (rew)   at (-2.7, 0.6) {Reward $r_t$\\\scriptsize(формула 1)};
+
+  \draw[arr] (sim) -- node[above] {$(pitch, t^{\text{perf}})$} (tr);
+  \draw[arr] (tr)  -- node[right] {$s_t$} (pi);
+  \draw[arr] (pi)  -- node[below] {$a_t$} (rend);
+  \draw[arr] (rend.west) -| node[below, near start] {$t^{\text{render}}$} (rew);
+  \draw[arr] (rew.north) |- (pi.west);
+\end{tikzpicture}

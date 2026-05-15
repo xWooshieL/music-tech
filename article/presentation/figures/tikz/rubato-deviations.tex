@@ -1,0 +1,32 @@
+% ГРАФИК 2 — Bar-plot rubato deviations (performance_time − score_onset)
+\begin{tikzpicture}
+  \begin{axis}[
+    width=7.5cm, height=4.5cm,
+    ybar,
+    bar width=4pt,
+    xlabel={\# ноты в партитуре},
+    ylabel={$t^{\text{perf}} - t^{\text{nom}}$, c},
+    xmin=0, xmax=21,
+    ymin=-0.45, ymax=0.45,
+    tick style={black},
+    axis line style={black},
+    grid=major,
+    grid style={dotted, gray!50},
+    xtick={0,5,10,15,20},
+    label style={font=\footnotesize},
+    tick label style={font=\scriptsize},
+    title style={font=\footnotesize\itshape},
+    title={Synthetic rubato: ускорение $\to$ замедление}
+  ]
+    \addplot[
+      fill=black!40,
+      draw=black,
+    ] coordinates {
+      (1, -0.05) (2, -0.12) (3, -0.18) (4, -0.22) (5, -0.28)
+      (6, -0.30) (7, -0.28) (8, -0.22) (9, -0.15) (10, -0.08)
+      (11, 0.02) (12, 0.10) (13, 0.16) (14, 0.21) (15, 0.27)
+      (16, 0.32) (17, 0.36) (18, 0.34) (19, 0.28) (20, 0.20)
+    };
+    \draw[thick] (axis cs:0,0) -- (axis cs:21,0);
+  \end{axis}
+\end{tikzpicture}

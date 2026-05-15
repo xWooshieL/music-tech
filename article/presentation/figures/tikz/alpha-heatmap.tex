@@ -1,0 +1,63 @@
+% ГРАФИК 4 — HMM alpha-heatmap на noisy (диаг + размытие)
+% Простой TikZ-grid из 12×12 квадратиков; яркость = -alpha (чёрный=1).
+\begin{tikzpicture}[scale=0.34, every node/.style={font=\footnotesize}]
+
+  % --- Data: 12×12 grid, rows = score state, cols = event index ----
+  % Each value is the alpha mass; we shade gray accordingly.
+  \def\heatdata{
+    0/0/0.95, 1/0/0.05,
+    0/1/0.05, 1/1/0.90, 2/1/0.05,
+    1/2/0.05, 2/2/0.85, 3/2/0.10, 4/2/0.05,
+    2/3/0.05, 3/3/0.55, 4/3/0.40, 5/3/0.10, 6/3/0.05,
+    2/4/0.05, 3/4/0.30, 4/4/0.45, 5/4/0.40, 6/4/0.10, 7/4/0.05,
+    3/5/0.05, 4/5/0.10, 5/5/0.40, 6/5/0.55, 7/5/0.20, 8/5/0.10, 9/5/0.05,
+    5/6/0.10, 6/6/0.30, 7/6/0.65, 8/6/0.30, 9/6/0.10, 10/6/0.05,
+    6/7/0.05, 7/7/0.10, 8/7/0.40, 9/7/0.45, 10/7/0.30, 11/7/0.10,
+    7/8/0.05, 8/8/0.20, 9/8/0.40, 10/8/0.55, 11/8/0.30,
+    8/9/0.05, 9/9/0.10, 10/9/0.30, 11/9/0.60,
+    9/10/0.05, 10/10/0.10, 11/10/0.85,
+    10/11/0.05, 11/11/0.90
+  }
+
+  % Draw light background grid
+  \foreach \x in {0,...,11} {
+    \foreach \y in {0,...,11} {
+      \draw[fill=white, draw=black!15] (\x,\y) rectangle (\x+1,\y+1);
+    }
+  }
+
+  % Overlay heat cells (gray shaded)
+  \foreach \x/\y/\v in \heatdata {
+    \pgfmathsetmacro{\shade}{100 - 100*\v}
+    \filldraw[fill=black!\shade, draw=black!25]
+      (\x,\y) rectangle (\x+1,\y+1);
+  }
+
+  % Frame
+  \draw[thick] (0,0) rectangle (12,12);
+
+  % Axes
+  \draw[->, thick] (0,0) -- (13,0) node[right] {\# события};
+  \draw[->, thick] (0,0) -- (0,13) node[above] {Score state $i$};
+
+  % Ticks
+  \foreach \i in {0,2,4,6,8,10}
+    \node[below, font=\scriptsize] at (\i+0.5, -0.1) {\i};
+  \foreach \i in {0,2,4,6,8,10}
+    \node[left, font=\scriptsize] at (-0.1, \i+0.5) {\i};
+
+  % Colorbar
+  \begin{scope}[shift={(13.8, 0)}]
+    \foreach \i in {0,...,49} {
+      \pgfmathsetmacro{\v}{\i/49}
+      \pgfmathsetmacro{\shade}{100 - 100*\v}
+      \filldraw[fill=black!\shade, draw=none]
+        (0, \i*0.24) rectangle (0.7, \i*0.24+0.24);
+    }
+    \draw[thick] (0,0) rectangle (0.7, 12);
+    \node[font=\scriptsize, right] at (0.8, 0)  {0};
+    \node[font=\scriptsize, right] at (0.8, 12) {1};
+    \node[font=\scriptsize, rotate=90, anchor=south] at (1.3, 6)
+          {$\alpha_t(i)$};
+  \end{scope}
+\end{tikzpicture}

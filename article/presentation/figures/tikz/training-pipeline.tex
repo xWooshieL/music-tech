@@ -1,0 +1,24 @@
+% СХЕМА 10 — Pipeline обучения BC -> PPO
+\begin{tikzpicture}[
+  every node/.style={font=\scriptsize, align=center},
+  box/.style={draw, thick, minimum height=0.85cm, minimum width=1.7cm,
+              fill=white, rounded corners=1.5pt, inner sep=3pt},
+  bigbox/.style={box, minimum height=1.1cm, minimum width=2.4cm,
+                 line width=1pt, fill=black!4},
+  arr/.style={-{Latex[length=2mm]}, thick},
+]
+  \node[box]    (asap) at (0,0)     {ASAP\\dataset};
+  \node[box]    (bc)   at (2.8,0)   {BC training\\(MLP regr.)};
+  \node[box]    (pbc)  at (5.6,0)   {$\pi_{\text{BC}}$\\(init)};
+
+  \node[bigbox] (ppo)  at (5.6,-1.8) {\bfseries PPO + KL\\penalty};
+  \node[box]    (env)  at (2.0,-1.8) {Score\\FollowingEnv\\+ Simulator};
+
+  \node[box]    (pi)   at (9.0,-1.8) {$\pi_\theta$\\(final)};
+
+  \draw[arr] (asap)  -- node[above] {$(s_t, a^{*}_t)$} (bc);
+  \draw[arr] (bc)    -- node[above] {$\theta_{\text{BC}}$} (pbc);
+  \draw[arr] (pbc)   -- (ppo);
+  \draw[arr, latex-latex] (ppo) -- (env);
+  \draw[arr] (ppo)   -- (pi);
+\end{tikzpicture}

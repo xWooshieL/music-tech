@@ -1,0 +1,124 @@
+% =====================================================================
+%  Презентация для конференции "Научный Телеграф" 2026
+%  Команда MusicTech, Центральный Университет
+%
+%  Стиль: minimal beamer, 16:9, Times-like serif, чёрно-белая
+%  научная графика (TikZ/PGFPlots), без декораций navigation bar.
+%  Согласована с тезисами (article/тезисы.tex) и статьёй (article/main.tex).
+%
+%  Сборка:  pdflatex -shell-escape presentation.tex  (×2)
+%  Либо:    .\build.ps1
+% =====================================================================
+\documentclass[aspectratio=169,11pt,xcolor={dvipsnames,table}]{beamer}
+
+% ---------- Кодировки и язык ----------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Times-подобный шрифт под единый стиль со статьёй
+\usepackage{mathptmx}
+
+% ---------- Графика -------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows.meta, positioning, fit, calc, shapes.geometric,
+  shapes.misc, decorations.pathreplacing, decorations.markings,
+  patterns, backgrounds, matrix
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ---------- Математика и листинги -----------------------------------
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{booktabs}
+\usepackage{listings}
+
+% ---------- Beamer theme: чистый, белый, без декораций --------------
+\usetheme{default}
+\usecolortheme{seahorse}
+\setbeamercolor{normal text}{fg=black, bg=white}
+\setbeamercolor{structure}{fg=black}
+\setbeamercolor{frametitle}{fg=black, bg=white}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{institute}{fg=black!70}
+\setbeamercolor{date}{fg=black!70}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black!70}
+\setbeamercolor{block title}{bg=black!8, fg=black}
+\setbeamercolor{block body}{bg=black!2, fg=black}
+
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small, shape=\itshape}
+
+% Убираем все декорации
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \hfill
+  \scriptsize\insertframenumber/\inserttotalframenumber\hspace{1em}\vspace{4pt}
+}
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\textendash}
+
+% Заголовок слайда — тонкая линия снизу
+\setbeamertemplate{frametitle}{%
+  \vspace*{0.4em}\hspace*{0.6em}%
+  \insertframetitle\par
+  \vspace*{-0.2em}%
+  {\color{black!30}\hrule height 0.6pt}%
+  \vspace*{0.3em}%
+}
+
+% Длинная подпись внизу (не путать с встроенным \caption)
+\newcommand{\figcaption}[1]{{\par\vspace{0.4em}\footnotesize\itshape\color{black!75} #1\par}}
+
+% Подсветка ключевого слова (RL-блоки). \accent — TeX primitive, поэтому свой макрос.
+\newcommand{\rlhi}[1]{{\bfseries #1}}
+
+% Удобства для формул
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\providecommand{\Real}{\mathbb{R}}
+\providecommand{\Expect}{\mathbb{E}}
+
+% Папка с TikZ
+\graphicspath{{figures/}{figures/tikz/}{../figures/}{../figures/tikz/}}
+
+% ---------- Метаданные ---------------------------------------------
+\title[Adaptive Accompaniment in Realtime]{%
+  Адаптивный аккомпанемент в реальном времени:\\
+  от классических трекеров партитуры к RL-агенту опережающего темпа
+}
+\subtitle{\normalsize\itshape Гибридная архитектура для виртуального оркестра}
+\author{Никита Новицкий \and Никита Борисов}
+\institute{Центральный Университет (Т-Банк), мастерская MusicTech}
+\date{Мультидисциплинарная молодёжная конференция «Научный Телеграф», 2026}
+
+\begin{document}
+
+\input{sections/01-title.tex}
+\input{sections/02-problem.tex}
+\input{sections/03-pipeline.tex}
+\input{sections/04-score-format.tex}
+\input{sections/05-performance.tex}
+\input{sections/06-oltw.tex}
+\input{sections/07-hmm.tex}
+\input{sections/08-hsmm.tex}
+\input{sections/09-hybrid.tex}
+\input{sections/10-baseline-results.tex}
+\input{sections/11-baseline-limits.tex}
+\input{sections/12-proposed-architecture.tex}
+\input{sections/13-rl-math.tex}
+\input{sections/14-training.tex}
+\input{sections/15-simulator.tex}
+\input{sections/16-roadmap.tex}
+\input{sections/17-conclusion.tex}
+\input{sections/18-thanks.tex}
+
+\end{document}
