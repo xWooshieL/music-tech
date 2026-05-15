@@ -1,4 +1,4 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 14 — Обучение: BC + PPO
 % =====================================================================
 \begin{frame}{Обучение: двустадийная схема BC $\to$ PPO}
@@ -10,7 +10,7 @@
   (Sequence Tutor, Jaques 2017).
 
   \begin{columns}[T,onlytextwidth]
-    \column{0.40\textwidth}
+    \column{0.46\textwidth}
     \textbf{Стадия A --- Behavior Cloning} на ASAP:
     \begin{enumerate}\setlength{\itemsep}{0.2em}
       \item Считаем оракульный темп
@@ -20,7 +20,7 @@
       \item Получаем стартовую политику $\pi_{\text{BC}}$.
     \end{enumerate}
 
-    \vspace{0.6em}
+    \vspace{0.4em}
     \textbf{Стадия B --- PPO $+$ KL:}
     \begin{enumerate}\setlength{\itemsep}{0.2em}
       \item Среда \texttt{ScoreFollowingEnv} (Gymnasium) поверх
@@ -28,14 +28,16 @@
       \item Симулятор солиста (rubato по Repp 1995).
       \item Награда $r_t$ из формулы\,(1).
       \item KL-штраф
-            $\beta\,D_{\text{KL}}(\pi_\theta\,\|\,\pi_{\text{BC}})$,
-            чтобы не уехать в нефизичные регионы.
+            $\beta\,D_{\text{KL}}(\pi_\theta\,\|\,\pi_{\text{BC}})$
+            против ухода в нефизичные регионы.
     \end{enumerate}
 
-    \column{0.60\textwidth}
+    \column{0.54\textwidth}
     \centering
-    \input{figures/tikz/training-pipeline.tex}
-    \figcaption{ASAP даёт инициализацию, PPO дотачивает в симуляторе.}
+    \resizebox{\linewidth}{!}{%
+      \input{figures/tikz/training-pipeline.tex}%
+    }\\[0.4em]
+    {\scriptsize\itshape\color{black!75}
+     ASAP даёт инициализацию,\\ PPO дотачивает в симуляторе.}
   \end{columns}
 \end{frame}
-

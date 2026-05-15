@@ -1,4 +1,4 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 3 — Что технически делает система
 % =====================================================================
 \begin{frame}{Что технически делает система}
@@ -8,22 +8,21 @@
   определять текущую позицию исполнителя.
 
   \begin{columns}[T,onlytextwidth]
-    \column{0.42\textwidth}
-    \begin{itemize}\setlength{\itemsep}{0.4em}
-      \item \textbf{Вход:} партитура (известна) + поток нот солиста
+    \column{0.52\textwidth}
+    \vspace{0.4em}
+    \begin{itemize}\setlength{\itemsep}{0.5em}
+      \item \textbf{Вход:} партитура (известна) $+$ поток нот солиста
             (realtime).
-      \item \textbf{Выход:} индекс ноты $\hat\imath_t$
-            $+$ темповый коэффициент $\tau_t$.
+      \item \textbf{Выход:} индекс ноты $\hat\imath_t$ $+$
+            темповый коэффициент $\tau_t$.
       \item \textbf{Бюджет задержки:} $\le 20$ мс
             (порог восприятия рассинхронизации, Cont 2010).
+      \item Core ML --- классический трекер; \rlhi{RL-агент
+            опережающе} управляет темпом на 200--500 мс вперёд.
     \end{itemize}
 
-    \column{0.58\textwidth}
+    \column{0.48\textwidth}
     \centering
-    \input{figures/tikz/system-pipeline.tex}
-    \figcaption{Core ML (HMM/HSMM/OLTW) и TempoTracker --- классическое
-             ядро. RL-агент \emph{дополняет} ядро опережающим
-             предсказанием темпа на 200--500 мс.}
+    \includegraphics[height=0.78\textheight]{figures/png/system_pipeline.png}
   \end{columns}
 \end{frame}
-

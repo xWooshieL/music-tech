@@ -1,35 +1,34 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 9 — Baseline 4: Hybrid Fusion (наработка лаборатории)
 % =====================================================================
 \begin{frame}{Baseline 4: Hybrid Fusion}
   \small
 
-  \texttt{HybridScoreFollower} --- параллельно работают HSMM и OLTW
-  плюс \rlhi{якорный resync}.
+  \texttt{HybridScoreFollower} --- HSMM $+$ OLTW $+$ \rlhi{якорный resync}.
 
+  \vspace{0.4em}
+  \centering
+  \includegraphics[width=0.93\textwidth]{figures/png/hybrid_fusion.png}
+
+  \vspace{0.6em}
   \begin{columns}[T,onlytextwidth]
-    \column{0.42\textwidth}
-    \begin{enumerate}\setlength{\itemsep}{0.3em}
-      \item \textbf{HSMM:} вероятностный ответ с confidence.
-      \item \textbf{OLTW:} жёсткий fallback-ответ.
-      \item \textbf{Anchor search:} последние $K$ событий ищутся как
-            окно в score через template-matching по pitch $+$
-            temp-fitting.
-    \end{enumerate}
-
-    \vspace{0.4em}
+    \column{0.50\textwidth}
+    \footnotesize
     \textbf{Правило выбора:}
-    \begin{itemize}\footnotesize\setlength{\itemsep}{0.2em}
+    \begin{itemize}\setlength{\itemsep}{0.2em}
       \item $\text{conf} > \theta \Rightarrow$ HSMM;
       \item иначе $\Rightarrow$ OLTW;
-      \item якорь нашёл сильное совпадение $\Rightarrow$ resync обоих.
+      \item якорь нашёл сильное совпадение
+            $\Rightarrow$ resync обоих.
     \end{itemize}
 
-    \column{0.58\textwidth}
-    \centering
-    \input{figures/tikz/hybrid-fusion.tex}
-    \figcaption{\textbf{Это «классический трекер»} в смысле тезисов
-             конференции --- поверх него ставится RL-слой.}
+    \column{0.50\textwidth}
+    \footnotesize
+    \textbf{Anchor search} ищет последние $K$ событий как окно в score
+    через template-matching по pitch $+$ temp-fitting.
+
+    \vspace{0.3em}
+    \textbf{Это «классический трекер»} в смысле тезисов --- поверх
+    него ставится RL-слой.
   \end{columns}
 \end{frame}
-

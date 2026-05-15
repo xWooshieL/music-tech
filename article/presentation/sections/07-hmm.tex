@@ -1,23 +1,24 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 7 — Baseline 2: HMM (наработка лаборатории)
 % =====================================================================
 \begin{frame}{Baseline 2: HMM \small(Rabiner 1989)}
-  \footnotesize\setlength{\abovedisplayskip}{2pt}
-  \setlength{\belowdisplayskip}{2pt}
+  \footnotesize\setlength{\abovedisplayskip}{3pt}
+  \setlength{\belowdisplayskip}{3pt}
 
   Скрытая Марковская модель по партитуре.
 
   \begin{columns}[T,onlytextwidth]
-    \column{0.55\textwidth}
-    \begin{itemize}\setlength{\itemsep}{0.3em}
+    \column{0.50\textwidth}
+    \vspace{0.4em}
+    \begin{itemize}\setlength{\itemsep}{0.35em}
       \item Состояния: $i \in \{0,\ldots,N{-}1\}$ --- индексы нот.
-      \item Эмиссия (гауссиана по pitch в полутонах):
+      \item Эмиссия (гауссиана по pitch, $\sigma$ в полутонах):
             \[
               b_i(o) = \frac{1}{\sigma\sqrt{2\pi}}
               \exp\!\Bigl(-\tfrac12
               \bigl(\tfrac{o - p_i}{\sigma}\bigr)^{\!2}\Bigr)
             \]
-      \item Переходы $a_{j,i} \in \{\textit{stay, advance, skip}\}$,
+      \item Переходы $\{$stay$=0.3$, advance$=0.6$, skip$=0.1\}$,
             веса зависят от \texttt{elapsed} в state.
       \item Forward-обновление:
             \[
@@ -27,16 +28,8 @@
             \emph{confidence} $= \max_i \alpha_t(i)$.
     \end{itemize}
 
-    \column{0.45\textwidth}
+    \column{0.50\textwidth}
     \centering
-    \input{figures/tikz/hmm-chain.tex}
-    \figcaption{Цепочка состояний. Stay-петли, advance-шаги,
-             skip-через-одно. Эмиссия --- гауссиана по pitch.}
+    \includegraphics[width=\linewidth]{figures/png/hmm_chain.png}
   \end{columns}
-
-  \vspace{0.2em}
-  {\footnotesize \textbf{Что добавляет к OLTW:} распределение по
-   позициям $\Rightarrow$ есть confidence для fusion с другими
-   моделями.}
 \end{frame}
-

@@ -1,4 +1,4 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 8 — Baseline 3: HSMM (наработка лаборатории)
 % =====================================================================
 \begin{frame}{Baseline 3: HSMM \small(Cont 2010, эвристика)}
@@ -21,22 +21,18 @@
     В нашем коде (\texttt{hsmm\_follower.py}) реализована
     \emph{эвристика:} переходы пересчитываются от
     $r = \texttt{elapsed}/\texttt{nominal\_duration}$. Четыре исхода:
-    \[
-      \text{stay} \;/\; \text{advance} \;/\; \text{skip} \;/\;
-      \underbrace{\text{leap}}_{\text{пропуск 2 состояний}}
-    \]
+    stay / advance / skip / leap.
 
     \column{0.45\textwidth}
     \centering
-    \input{figures/tikz/hsmm-duration.tex}
-    \figcaption{HMM $+$ распределение длительности $p_i(\tau)$ над каждым
-             state. Переходы зависят от elapsed в state.}
+    \resizebox{0.95\linewidth}{!}{%
+      \input{figures/tikz/hsmm-duration.tex}%
+    }
   \end{columns}
 
-  \vspace{0.2em}
-  {\footnotesize \textbf{Добавляет к HMM:} учёт длительностей
-   $\Rightarrow$ правильное поведение при rubato и лишних нотах.\quad
-   \textbf{Ограничение:} наш HSMM~--- эвристика, не канонический Cont.
-   Плановое улучшение.}
+  \vspace{0.4em}
+  {\footnotesize
+   \textbf{Добавляет к HMM:} учёт длительностей $\Rightarrow$ правильное
+   поведение при rubato и лишних нотах. \quad
+   \textbf{Ограничение:} наш HSMM --- эвристика, не канонический Cont.}
 \end{frame}
-

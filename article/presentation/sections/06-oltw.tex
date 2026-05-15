@@ -1,35 +1,32 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 6 — Baseline 1: OLTW (наработка лаборатории)
 % =====================================================================
 \begin{frame}{Baseline 1: OLTW \small(Dixon 2005)}
-  \small\setlength{\abovedisplayskip}{2pt}
-  \setlength{\belowdisplayskip}{2pt}
-
+  \small
   \textbf{On-Line Time Warping} --- инкрементальный вариант DTW.
 
   \begin{columns}[T,onlytextwidth]
-    \column{0.52\textwidth}
-    \begin{itemize}\setlength{\itemsep}{0.25em}
-      \item Локальная стоимость:
+    \column{0.42\textwidth}
+    \vspace{0.4em}
+    \begin{itemize}\setlength{\itemsep}{0.45em}
+      \item Локальная стоимость:\\
             $\displaystyle c(i,t) = |\,p_i - o_t|$.
       \item Рекурсия:\\
-            $\displaystyle D[i,t] = c(i,t) +
-             \min\bigl(D[i{-}1,t{-}1],\, D[i{-}1,t],\, D[i,t{-}1]\bigr)$.
-      \item Предсказание: $\hat\imath_t = \argmin_i D[i,t]$.
-      \item Память $O(N)$ --- хранятся только две колонки.
-      \item Монотонизация $+$ \emph{RunCount} fail-safe: если позиция
-            $k$ событий не двигается, форсируем шаг вперёд.
+            $\displaystyle D[i,t] = c(i,t) + \min\bigl(D[i{-}1,t{-}1],$\\
+            \mbox{}\hfill$D[i{-}1,t],\, D[i,t{-}1]\bigr)$.
+      \item $\hat\imath_t = \argmin_i D[i,t]$.
+      \item Память $O(N)$ --- хранятся 2 колонки.
+      \item \emph{RunCount} fail-safe: $k$ событий без сдвига
+            $\Rightarrow$ форсируем шаг.
     \end{itemize}
 
-    \column{0.48\textwidth}
+    \column{0.58\textwidth}
     \centering
-    \input{figures/tikz/oltw-dp.tex}
-    \figcaption{Predicted index $=$ argmin по текущему столбцу.}
+    \includegraphics[width=\linewidth]{figures/png/oltw_dp.png}
   \end{columns}
 
-  \vspace{0.3em}
+  \vspace{0.4em}
   {\footnotesize \textbf{Плюсы:} простота, устойчивость к rubato,
    всегда выдаёт ответ.\quad
    \textbf{Минусы:} нет confidence, плохо ловит структурные ошибки.}
 \end{frame}
-

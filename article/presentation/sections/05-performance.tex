@@ -1,18 +1,17 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 5 — Данные: исполнение в реальном времени
 % =====================================================================
 \begin{frame}[fragile]{Данные: исполнение в реальном времени}
-  \small
+  \footnotesize
   Live-поток от солиста --- последовательность MIDI-событий:
 \begin{verbatim}
 {"pitch": 64, "timestamp": 1.234, "velocity": 88}
 {"pitch": 67, "timestamp": 1.481, "velocity": 95}
-...
 \end{verbatim}
 
   \begin{columns}[T,onlytextwidth]
     \column{0.40\textwidth}
-    \vspace{0.3em}
+    \vspace{0.4em}
     В реальном исполнении \texttt{timestamps} \emph{не совпадают} с
     \texttt{nominal\_onset} из-за rubato, ускорений, замедлений и
     ошибок.
@@ -24,10 +23,9 @@
 
     \column{0.60\textwidth}
     \centering
-    \input{figures/tikz/rubato-deviations.tex}
-    \figcaption{Типичный rubato: пианист сначала ускоряется
-             (отрицательные дельты), потом замедляется
-             (положительные). Это паттерн классического исполнения.}
+    \includegraphics[width=\linewidth]{figures/generated/rubato_deviations.pdf}\\[0.2em]
+    {\scriptsize\itshape\color{black!75}
+     Типичный rubato: ускорение (отриц.\ дельты), потом
+     замедление (положит.).}
   \end{columns}
 \end{frame}
-

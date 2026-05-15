@@ -1,33 +1,31 @@
-﻿% =====================================================================
+% =====================================================================
 % Слайд 10 — Результаты baseline на синтетике
 % =====================================================================
 \begin{frame}{Результаты baseline на синтетике}
-  \footnotesize
+  \scriptsize
 
-  Прогон трёх трекеров на синтетических сценариях:
-  \emph{ideal} (гамма ровно по нотам), \emph{rubato} (тот же pitch,
-  expressive timing), \emph{noisy} (лишние ноты, опечатки на полутон,
-  пропуски).
+  Прогон трёх трекеров на трёх синтетических сценариях:
+  \emph{ideal} (гамма ровно), \emph{rubato} (тот же pitch, expressive
+  timing), \emph{noisy} (лишние ноты, опечатки, пропуски).
 
+  \vspace{0.2em}
   \begin{columns}[T,onlytextwidth]
     \column{0.50\textwidth}
     \centering
-    \input{figures/tikz/oltw-trajectory.tex}
-    \figcaption{OLTW: на \emph{ideal}/\emph{rubato} --- диагональ.
-             На \emph{noisy} --- ступеньки от форсированных шагов
-             RunCount.}
+    \includegraphics[width=0.95\linewidth]{figures/generated/oltw_trajectory.pdf}\\[0.1em]
+    {\itshape\color{black!75}
+     OLTW: на ideal/rubato --- диагональ. На noisy --- ступеньки.}
 
     \column{0.50\textwidth}
     \centering
-    \input{figures/tikz/alpha-heatmap.tex}
-    \figcaption{HMM $\alpha$-heatmap на \emph{noisy}: уверенность
-             «размывается» по соседним состояниям при ошибках.}
+    \includegraphics[width=0.95\linewidth]{figures/generated/alpha_heatmap.pdf}\\[0.1em]
+    {\itshape\color{black!75}
+     HMM $\alpha$-heatmap на noisy: уверенность размывается.}
   \end{columns}
 
-  \vspace{0.3em}
-  {\centering
-   На синтетике классические трекеры \rlhi{работают}.\\
-   Реальный challenge --- крупные пьесы ($\sim$4000 состояний) и
-   индивидуальный rubato концертного исполнителя.\par}
+  \vspace{0.2em}
+  \centering
+  На синтетике классические трекеры \rlhi{работают}.\\
+  Реальный challenge --- крупные пьесы ($\sim$4000 state) и
+  индивидуальный rubato концертного исполнителя.
 \end{frame}
-
