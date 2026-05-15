@@ -1,124 +1,140 @@
 % =====================================================================
-%  Презентация для конференции "Научный Телеграф" 2026
-%  Команда MusicTech, Центральный Университет
+%  Презентация для конференции «Научный Телеграф» 2026
+%  Команда MusicTech, Центральный Университет (Т-Банк)
 %
-%  Стиль: minimal beamer, 16:9, Times-like serif, чёрно-белая
-%  научная графика (TikZ/PGFPlots), без декораций navigation bar.
-%  Согласована с тезисами (article/тезисы.tex) и статьёй (article/main.tex).
+%  Стиль: фирменный beamer команды (Madrid + seahorse, pdflatex).
+%  Согласован со статьёй (article/main.tex) и тезисами
+%  (article/тезисы.tex). Без \pause, по плану PRESENTATION.md.
 %
-%  Сборка:  pdflatex -shell-escape presentation.tex  (×2)
+%  Сборка:  pdflatex presentation.tex × 2
 %  Либо:    .\build.ps1
 % =====================================================================
-\documentclass[aspectratio=169,11pt,xcolor={dvipsnames,table}]{beamer}
+\documentclass[10pt]{beamer}
 
-% ---------- Кодировки и язык ----------------------------------------
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
-\usepackage{cmap}
-\usepackage{lmodern}
-\usepackage{microtype}
-
-% Times-подобный шрифт под единый стиль со статьёй
-\usepackage{mathptmx}
-
-% ---------- Графика -------------------------------------------------
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{
   arrows.meta, positioning, fit, calc, shapes.geometric,
   shapes.misc, decorations.pathreplacing, decorations.markings,
-  patterns, backgrounds, matrix
+  patterns, backgrounds, matrix, intersections
 }
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
-
-% ---------- Математика и листинги -----------------------------------
 \usepackage{amsmath, amssymb, mathtools}
 \usepackage{booktabs}
 \usepackage{listings}
 
-% ---------- Beamer theme: чистый, белый, без декораций --------------
-\usetheme{default}
-\usecolortheme{seahorse}
-\setbeamercolor{normal text}{fg=black, bg=white}
-\setbeamercolor{structure}{fg=black}
-\setbeamercolor{frametitle}{fg=black, bg=white}
-\setbeamercolor{title}{fg=black}
-\setbeamercolor{author}{fg=black}
-\setbeamercolor{institute}{fg=black!70}
-\setbeamercolor{date}{fg=black!70}
-\setbeamercolor{itemize item}{fg=black}
-\setbeamercolor{itemize subitem}{fg=black!70}
-\setbeamercolor{block title}{bg=black!8, fg=black}
-\setbeamercolor{block body}{bg=black!2, fg=black}
+% Лёгкая подсветка ключевых слов (синий — акцент seahorse-палитры)
+\definecolor{accentblue}{HTML}{2581C4}
+\newcommand{\rlhi}[1]{{\color{accentblue}\textbf{#1}}}
 
-\setbeamerfont{frametitle}{size=\large, series=\bfseries}
-\setbeamerfont{title}{size=\Large, series=\bfseries}
-\setbeamerfont{author}{size=\normalsize}
-\setbeamerfont{institute}{size=\small, shape=\itshape}
-
-% Убираем все декорации
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{%
-  \hfill
-  \scriptsize\insertframenumber/\inserttotalframenumber\hspace{1em}\vspace{4pt}
-}
-\setbeamertemplate{itemize item}{\textbullet}
-\setbeamertemplate{itemize subitem}{\textendash}
-
-% Заголовок слайда — тонкая линия снизу
-\setbeamertemplate{frametitle}{%
-  \vspace*{0.4em}\hspace*{0.6em}%
-  \insertframetitle\par
-  \vspace*{-0.2em}%
-  {\color{black!30}\hrule height 0.6pt}%
-  \vspace*{0.3em}%
+% Подпись под графиком / схемой
+\newcommand{\figcaption}[1]{%
+  {\par\vspace{0.3em}\footnotesize\itshape\color{black!75}#1\par}%
 }
 
-% Длинная подпись внизу (не путать с встроенным \caption)
-\newcommand{\figcaption}[1]{{\par\vspace{0.4em}\footnotesize\itshape\color{black!75} #1\par}}
-
-% Подсветка ключевого слова (RL-блоки). \accent — TeX primitive, поэтому свой макрос.
-\newcommand{\rlhi}[1]{{\bfseries #1}}
-
-% Удобства для формул
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \providecommand{\Real}{\mathbb{R}}
 \providecommand{\Expect}{\mathbb{E}}
 
-% Папка с TikZ
-\graphicspath{{figures/}{figures/tikz/}{../figures/}{../figures/tikz/}}
-
-% ---------- Метаданные ---------------------------------------------
-\title[Adaptive Accompaniment in Realtime]{%
-  Адаптивный аккомпанемент в реальном времени:\\
-  от классических трекеров партитуры к RL-агенту опережающего темпа
+% Listings под JSON
+\lstdefinestyle{json}{
+  basicstyle=\ttfamily\footnotesize,
+  numbers=none,
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{accentblue},
+  keywordstyle=\color{accentblue}\bfseries,
+  stringstyle=\color{black!70},
+  morekeywords={true, false, null},
 }
-\subtitle{\normalsize\itshape Гибридная архитектура для виртуального оркестра}
-\author{Никита Новицкий \and Никита Борисов}
-\institute{Центральный Университет (Т-Банк), мастерская MusicTech}
-\date{Мультидисциплинарная молодёжная конференция «Научный Телеграф», 2026}
+\lstset{style=json}
+
+% Пути к графике
+\graphicspath{{figures/}{figures/png/}{figures/generated/}{figures/tikz/}}
+
+\title[Адаптивный аккомпанемент в реальном времени]{%
+  Адаптивный аккомпанемент в реальном времени:\\
+  от классических трекеров партитуры\\
+  к RL-агенту опережающего темпа}
+\author[Новицкий, Борисов]{Н.~И. Новицкий \and Н.~С. Борисов}
+\institute[ЦУ]{АНО Центральный Университет, мастерская MusicTech}
+\date{Научный Телеграф, 2026}
+
+\logo{\includegraphics[height=0.8cm]{cu_logo.png}}
 
 \begin{document}
 
-\input{sections/01-title.tex}
+% =========================================================
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Структура презентации}
+  \tableofcontents
+\end{frame}
+
+% =========================================================
+\section{Введение}
+\input{sections/00-introduction.tex}
+
+% =========================================================
+\section{Постановка задачи}
 \input{sections/02-problem.tex}
 \input{sections/03-pipeline.tex}
+
+% =========================================================
+\section{Данные: партитура и исполнение}
 \input{sections/04-score-format.tex}
 \input{sections/05-performance.tex}
+
+% =========================================================
+\section{Классические трекеры (baseline)}
+\input{sections/06a-dtw-derivation.tex}
 \input{sections/06-oltw.tex}
+\input{sections/06b-oltw-example.tex}
 \input{sections/07-hmm.tex}
+\input{sections/07a-hmm-forward.tex}
+\input{sections/07b-hmm-example.tex}
 \input{sections/08-hsmm.tex}
 \input{sections/09-hybrid.tex}
 \input{sections/10-baseline-results.tex}
+
+% =========================================================
+\section{Почему этого недостаточно}
 \input{sections/11-baseline-limits.tex}
+
+% =========================================================
+\section{Предлагаемый подход: RL-агент темпа}
 \input{sections/12-proposed-architecture.tex}
+\input{sections/12a-mdp-formal.tex}
 \input{sections/13-rl-math.tex}
+\input{sections/13a-reward-derivation.tex}
+
+% =========================================================
+\section{Обучение и симулятор}
 \input{sections/14-training.tex}
 \input{sections/15-simulator.tex}
+
+% =========================================================
+\section{Итоги и планы}
 \input{sections/16-roadmap.tex}
 \input{sections/17-conclusion.tex}
+
+% =========================================================
+\section{Литература}
+\input{sections/19-references.tex}
+
+% =========================================================
 \input{sections/18-thanks.tex}
 
 \end{document}

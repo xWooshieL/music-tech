@@ -1,5 +1,5 @@
 #!/usr/bin/env pwsh
-# Сборка presentation.pdf. Запускается из article/presentation/.
+# Сборка presentation.pdf через pdflatex (Madrid + seahorse, T2A).
 
 $ErrorActionPreference = "Stop"
 
@@ -7,7 +7,7 @@ if (Test-Path presentation.pdf) {
     Remove-Item presentation.pdf -Force -ErrorAction SilentlyContinue
 }
 
-# Два прогона pdflatex — нужно для счётчиков (frame number, refs).
+# Два прогона для tableofcontents и счётчиков.
 pdflatex -interaction=nonstopmode -halt-on-error presentation.tex | Out-Null
 pdflatex -interaction=nonstopmode -halt-on-error presentation.tex | Out-Null
 
@@ -19,7 +19,6 @@ if (Test-Path presentation.pdf) {
     exit 1
 }
 
-# Подчищаем артефакты, оставляем только .tex / .pdf / build.ps1 / README.md.
 Get-ChildItem -File | Where-Object {
     $_.Extension -in @('.aux', '.log', '.out', '.toc', '.snm', '.nav', '.vrb', '.fls', '.fdb_latexmk', '.synctex.gz')
 } | Remove-Item -Force -ErrorAction SilentlyContinue

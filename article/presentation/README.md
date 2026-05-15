@@ -1,25 +1,38 @@
 # Презентация MusicTech — «Научный Телеграф» 2026
 
-Доклад на 15–20 минут, **19 слайдов**. Стиль согласован со статьёй
-(`article/main.tex`) и тезисами (`article/тезисы.tex`): чёрно-белая
-научная типографика, Times-подобный serif, минималистичный beamer
-без украшений.
+Доклад на 15–20 минут, **25 страниц** (титул + 6 outline-секций + 18
+содержательных слайдов). Стиль — beamer-шаблон University of
+Birmingham (`template/`), адаптированный под Центральный Университет:
+тёмный фон, фирменный жёлтый акцент, шрифты Marcellus + Manrope
+(включены в `template/fonts/`), логотип ЦУ в `template/logos/`.
 
 ## Структура папки
 
 ```
 article/presentation/
 ├── presentation.tex          ← preamble + \input{sections/...}
-├── presentation.pdf          ← собранный PDF (19 страниц, 16:9)
-├── build.ps1                 ← два прогона pdflatex
+├── presentation.pdf          ← собранный PDF (25 страниц, 16:9, ~600 КБ)
+├── build.ps1                 ← два прогона xelatex
 ├── README.md
-├── sections/                 ← 18 .tex-фрагментов, по одному на слайд
-│   ├── 01-title.tex
+├── template/                 ← UoB beamer theme (адаптирован под ЦУ)
+│   ├── beamerthemeuob.sty
+│   ├── beamercolorthemeuob.sty
+│   ├── beamerfontthemeuob.sty
+│   ├── beamerinnerthemeuob.sty
+│   ├── beamerouterthemeuob.sty
+│   ├── fonts/
+│   │   ├── Manrope.ttf       (с кириллицей, основной шрифт)
+│   │   └── Marcellus.ttf     (только латиница, для лат.\ заголовков)
+│   └── logos/
+│       ├── UoB_dark.png      (логотип ЦУ для тёмной темы)
+│       └── UoB_light.png     (логотип ЦУ для светлой темы)
+├── sections/                 ← 17 .tex-фрагментов по слайдам 2-18
+│   ├── 02-problem.tex
 │   ├── ...
 │   └── 18-thanks.tex
 └── figures/
     ├── generate_plots.py     ← matplotlib-скрипт перегенерации графиков
-    ├── png/                  ← 5 ручных схем из шаблона презентации
+    ├── png/                  ← 5 ручных схем из исходного шаблона
     │   ├── world_view.png        (Слайд 2 — солист vs оркестр)
     │   ├── system_pipeline.png   (Слайд 3 — pipeline)
     │   ├── oltw_dp.png           (Слайд 6 — OLTW DP)
@@ -43,6 +56,8 @@ article/presentation/
 
 ## Сборка
 
+**Важно:** требуется **xelatex** (не pdflatex) — из-за `fontspec` и TTF.
+
 ```powershell
 cd article/presentation
 .\build.ps1
@@ -51,76 +66,100 @@ cd article/presentation
 или вручную:
 
 ```powershell
-pdflatex -interaction=nonstopmode presentation.tex
-pdflatex -interaction=nonstopmode presentation.tex
+xelatex -interaction=nonstopmode presentation.tex
+xelatex -interaction=nonstopmode presentation.tex
 ```
 
-Результат — `presentation.pdf` (19 страниц, ≈ 0.9 МБ).
+Два прогона нужны для outline-слайдов между секциями. Результат —
+`presentation.pdf`, 25 страниц, ≈ 0.6 МБ.
 
-Если нужно **перегенерировать графики Рахманинова** (например после
-смены `rach_solo.json`):
+Если нужно **перегенерировать графики Рахманинова**:
 
 ```powershell
 cd article/presentation/figures
 python generate_plots.py
 ```
 
-Скрипт читает реальные `rach_solo.json` (3797 state) и сохраняет
-PDF/PNG в `generated/`.
+## Как устроена визуальная адаптация под тёмный фон
+
+Все наши схемы (PNG, PDF, TikZ) нарисованы в чёрно-белом научном
+стиле (белый фон, чёрные линии и текст) — это согласовано со
+статьёй и тезисами. На тёмном фоне UoB-темы они бы стали
+нечитаемыми, поэтому каждое изображение оборачивается в макрос
+`\whitepane{...}` (определён в `presentation.tex`):
+
+```latex
+\newcommand{\whitepane}[1]{%
+  \begingroup\setlength{\fboxsep}{4pt}%
+  \colorbox{white}{\color{black}#1}%
+  \endgroup}
+```
+
+`\whitepane` ставит белую плашку с отступами 4 pt вокруг
+изображения. Получаем «галерейный» эффект: тёмный слайд, на нём
+яркие белые карточки с научной графикой.
+
+Жёлтые акценты (`\rlhi{...}`), цвет цитат (`\figcaption{...}`,
+`lightyellow` italic) и фирменный жёлтый шрифт `Цель:` /
+`не зависит от длины пьесы` подсвечивают **ключевую идею** доклада.
+
+JSON-листинги оформлены через `lstlisting[style=darkjson]` —
+жёлтая рамка, белый/жёлтый/голубой синтаксис на чёрной плашке.
 
 ## Что на каком слайде
 
-| #  | Слайд                                | Визуал                                   |
-|----|--------------------------------------|------------------------------------------|
-| 1  | Титульник                            | —                                        |
-| 2  | Проблема                             | `png/world_view.png`                     |
-| 3  | Pipeline системы                     | `png/system_pipeline.png`                |
-| 4  | Формат партитуры (`score.json`)      | `generated/rach_solo_pitch_time.pdf`     |
-| 5  | Performance MIDI / rubato            | `generated/rubato_deviations.pdf`        |
-| 6  | OLTW (baseline 1)                    | `png/oltw_dp.png`                        |
-| 7  | HMM (baseline 2)                     | `png/hmm_chain.png`                      |
-| 8  | HSMM (baseline 3)                    | `tikz/hsmm-duration.tex`                 |
-| 9  | Hybrid Fusion (baseline 4)           | `png/hybrid_fusion.png`                  |
-| 10 | Результаты baseline на синтетике     | `oltw_trajectory.pdf` + `alpha_heatmap.pdf` |
-| 11 | Почему baseline недостаточно         | `tikz/reactive-vs-anticip.tex`           |
-| 12 | Предлагаемая архитектура (РИС.\,1)   | `tikz/proposed-arch.tex`                 |
-| 13 | Математика RL-слоя: формулы          | — (формулы)                              |
-| 14 | Энкодер состояния $s_t$              | `tikz/state-encoder.tex`                 |
-| 15 | Обучение BC → PPO + KL               | `tikz/training-pipeline.tex`             |
-| 16 | Симулятор солиста и рендера          | `tikz/simulator-loop.tex`                |
-| 17 | Что готово и план                    | `tikz/roadmap-timeline.tex`              |
-| 18 | Выводы                               | —                                        |
-| 19 | Спасибо / Вопросы                    | QR на репозиторий                        |
+(нумерация PDF, учитывает outline-слайды от `\section{}`)
 
-## Стиль графики
-
-- Все растровые схемы (`png/`) — ручные draw.io диаграммы пользователя:
-  чёрный контур, белая заливка, аккуратные стрелки, Times-подобный
-  шрифт. Это «шаблон презентации».
-- Графики (`generated/`) — matplotlib в чёрно-белом научном стиле
-  (`grayscale`, `font.family=serif`, dotted grid). Шрифт совпадает
-  со статьёй.
-- TikZ-схемы (`tikz/`) — там, где нужна тонкая интеграция с формулами
-  и счётчиками beamer. Сжимаются через `\resizebox{\linewidth}{!}{...}`
-  чтобы вписаться в ширину колонки и не пересекаться с текстом.
+| #  | Что                                          | Визуал                                   |
+|----|----------------------------------------------|------------------------------------------|
+| 1  | Титульник                                    | `template/logos/UoB_dark.png` (ЦУ)       |
+| 2  | Outline: Постановка задачи и pipeline        | —                                        |
+| 3  | Проблема                                     | `png/world_view.png`                     |
+| 4  | Pipeline системы                             | `png/system_pipeline.png`                |
+| 5  | Outline: Данные                              | —                                        |
+| 6  | Формат партитуры (`score.json`)              | `generated/rach_solo_pitch_time.pdf`     |
+| 7  | Performance MIDI / rubato                    | `generated/rubato_deviations.pdf`        |
+| 8  | Outline: Классические трекеры                | —                                        |
+| 9  | OLTW                                         | `png/oltw_dp.png`                        |
+| 10 | HMM                                          | `png/hmm_chain.png`                      |
+| 11 | HSMM                                         | `tikz/hsmm-duration.tex`                 |
+| 12 | Hybrid Fusion                                | `png/hybrid_fusion.png`                  |
+| 13 | Результаты baseline на синтетике             | `oltw_trajectory` + `alpha_heatmap`      |
+| 14 | Outline: Гипотеза RL                         | —                                        |
+| 15 | Почему baseline недостаточно                 | `tikz/reactive-vs-anticip.tex`           |
+| 16 | Предлагаемая архитектура (РИС.\,1 тезисов)   | `tikz/proposed-arch.tex`                 |
+| 17 | Математика RL-слоя: формулы                  | —                                        |
+| 18 | Энкодер состояния $s_t$                      | `tikz/state-encoder.tex`                 |
+| 19 | Outline: Обучение                            | —                                        |
+| 20 | Обучение BC → PPO + KL                       | `tikz/training-pipeline.tex`             |
+| 21 | Симулятор солиста и рендера                  | `tikz/simulator-loop.tex`                |
+| 22 | Outline: Итоги                               | —                                        |
+| 23 | Что готово и план                            | `tikz/roadmap-timeline.tex`              |
+| 24 | Выводы                                       | —                                        |
+| 25 | Спасибо / Вопросы                            | QR на репозиторий                        |
 
 ## Соответствие тезисам
 
-Слайды 12–13 воспроизводят буква-в-букву:
+Слайды 16–17 воспроизводят буква-в-букву:
 
-- **РИС. 1** из `article/тезисы.pdf` — схема архитектуры с
-  $\pi_\theta$, средой, наградой;
+- **РИС. 1** из `article/тезисы.pdf` (схема архитектуры с
+  $\pi_\theta$, средой, наградой);
 - **Формула (1)** награды
   $r_t = -|t^{\text{render}}_t - t^{\text{perf}}_t| - \lambda L_{\text{align}}(t) - \mu (a_t - a_{t-1})^2$
-  с теми же тремя `\underbrace`-объяснениями, что и в тезисах.
+  с теми же тремя `\underbrace`-объяснениями.
 
-Это критично: внешний экспертный совет конференции будет сверять
-презентацию с тезисами.
+## Шрифты и кириллица
 
-## Источник графика Рахманинова
+- `Manrope.ttf` — sans-serif **с кириллицей** (Google Fonts). Это
+  основной шрифт всего текста.
+- `Marcellus.ttf` — serif **без кириллицы**. Используется в шаблоне
+  как `\titlefont` для крупных заголовков, но `presentation.tex`
+  явно переопределяет `\titlefont` на Manrope, иначе заголовки
+  слайдов и `\inserttitle` пропадают.
+- `DejaVu Sans Mono` (`\setmonofont`) — для `\texttt{...}`, нужен
+  для корректного `\texttt{score.json}` и других русских блоков
+  кода.
 
-Слайд 4 использует график pitch vs time, аналогичный ячейке 9 из
-`src/musictech-app/notebooks/02_score_format.ipynb`. Те же данные
-(`midi/rach_solo.json`, 3797 state, top-нота каждого аккорда),
-переотрисованные в ч/б стиле для печатной презентации (см.
-`figures/generate_plots.py::plot_rach_solo_pitch_time`).
+Шаблон поддерживает переключение тёмной/светлой темы:
+`\usetheme[light]{uob}` — если кому-то покажется, что тёмный режим
+слишком радикален для конкретного проектора.
