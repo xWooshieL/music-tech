@@ -1,0 +1,76 @@
+{
+  "study_mode": {
+    "directory": "midi\\library\\03_23_2026_2\\study_mode",
+    "left_midi": "midi\\library\\03_23_2026_2\\study_mode\\left_hand.mid",
+    "right_midi": "midi\\library\\03_23_2026_2\\study_mode\\right_hand.mid",
+    "left_json": "midi\\library\\03_23_2026_2\\study_mode\\left_hand.json",
+    "right_json": "midi\\library\\03_23_2026_2\\study_mode\\right_hand.json",
+    "split_strategy": "smart_hand_splitter",
+    "chord_epsilon": 0.03,
+    "left_notes": 764,
+    "right_notes": 137,
+    "left_score_states": 644,
+    "right_score_states": 135,
+    "left_summary": "764 notes | range 36-55 | mean pitch 38.82",
+    "right_summary": "137 notes | range 46-55 | mean pitch 50.77",
+    "left_profile_path": "midi\\library\\03_23_2026_2\\study_mode\\left_hand.hybrid_profile.json",
+    "right_profile_path": "midi\\library\\03_23_2026_2\\study_mode\\right_hand.hybrid_profile.json",
+    "left_calibration_command": [
+      "python3",
+      "calibrate_hybrid_profile.py",
+      "midi\\library\\03_23_2026_2\\study_mode\\left_hand.json",
+      "--level",
+      "fast"
+    ],
+    "right_calibration_command": [
+      "python3",
+      "calibrate_hybrid_profile.py",
+      "midi\\library\\03_23_2026_2\\study_mode\\right_hand.json",
+      "--level",
+      "fast"
+    ],
+    "prep_report": "midi\\library\\03_23_2026_2\\study_mode\\prep_report.json"
+  },
+  "epsilon_candidates": [
+    {
+      "chord_epsilon": 0.03,
+      "states": 644,
+      "average_chord_size": 1.186335,
+      "p95_chord_size": 2,
+      "max_chord_size": 3,
+      "score": 0.0
+    },
+    {
+      "chord_epsilon": 0.025,
+      "states": 644,
+      "average_chord_size": 1.186335,
+      "p95_chord_size": 2,
+      "max_chord_size": 3,
+      "score": 0.02
+    },
+    {
+      "chord_epsilon": 0.02,
+      "states": 644,
+      "average_chord_size": 1.186335,
+      "p95_chord_size": 2,
+      "max_chord_size": 3,
+      "score": 0.04
+    },
+    {
+      "chord_epsilon": 0.04,
+      "states": 644,
+      "average_chord_size": 1.186335,
+      "p95_chord_size": 2,
+      "max_chord_size": 3,
+      "score": 0.04
+    },
+    {
+      "chord_epsilon": 0.05,
+      "states": 644,
+      "average_chord_size": 1.186335,
+      "p95_chord_size": 2,
+      "max_chord_size": 3,
+      "score": 0.08
+    }
+  ]
+}

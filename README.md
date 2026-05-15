@@ -2,10 +2,10 @@
 
 **Команда мастерской MusicTech, Центральный Университет (Т-Банк), 2026**
 
-Репозиторий научного проекта по *real-time score following*: HMM/OLTW-
+Репозиторий научного проекта по *real-time score following*: HMM/HSMM/OLTW-
 бейзлайн + инновационный RL-модуль предсказания темпа для виртуального
 оркестрового аккомпанемента. Цель — статья на конференцию
-**«Центральный Телеграф»** (submission — **3 мая 2026**, доклад —
+**«Научный Телеграф»** (submission — **3 мая 2026**, доклад —
 17 мая 2026), позже — англоязычная версия для **ISMIR 2026** (Abu Dhabi).
 
 ---
@@ -19,11 +19,12 @@ music-tech/
 ├── .gitignore
 ├── ScoreFollowing.pdf       ← методичка по DTW / OLTW / HMM
 │
-├── article/                 ← всё про статью
+├── article/                 ← всё про статью и тезисы
 │   ├── README.md            ← описание папки + ссылки на разделы
 │   ├── main.tex             ← главный LaTeX-файл (REVTeX 4-2)
 │   ├── main.pdf             ← собранный PDF (открывается в GitHub)
-│   ├── references.bib       ← библиография (BibTeX)
+│   ├── тезисы.tex / тезисы.pdf  ← 2-страничные конференц-тезисы
+│   ├── references.bib       ← библиография (BibTeX, 35 источников)
 │   ├── mainNotes.bib        ← рабочие заметки и черновые ссылки
 │   ├── build.ps1            ← сборка PDF одной командой
 │   ├── ismir.sty            ← резервный ISMIR-шаблон
@@ -31,40 +32,67 @@ music-tech/
 │   ├── cite.sty             ← пакет цитирования
 │   ├── cc_by.{eps,pdf,png}  ← логотип лицензии (нужен ISMIR-LBD)
 │   │
-│   ├── sections/            ← все разделы статьи (12 .tex)
+│   ├── sections/            ← 9 разделов + 4 приложения (теоретическая статья)
 │   │   ├── 01-introduction.tex
 │   │   ├── 02-related-work.tex
-│   │   ├── 03-background.tex
-│   │   ├── 04-datasets.tex
-│   │   ├── 05-realtime-pipeline.tex
-│   │   ├── 06-cnn-and-corner-cases.tex
-│   │   ├── 07-rl-anticipation.tex          ← изюминка статьи (RL)
-│   │   ├── 08-experiments.tex
+│   │   ├── 03-formal-problem.tex
+│   │   ├── 04-math-foundations.tex     ← DTW, OLTW, HMM, HSMM, SSMM, DF
+│   │   ├── 05-rl-foundations.tex       ← MDP, POMDP, PPO, GAE, BC, RLHF
+│   │   ├── 06-rl-for-music.tex         ← обзор Dorfer, Henkel, Peter, Wu
+│   │   ├── 07-proposal.tex             ← наша гипотеза (RL-anticipation)
+│   │   ├── 08-discussion.tex
 │   │   ├── 09-conclusion.tex
-│   │   ├── A-appendix-hmm.tex
+│   │   ├── A-appendix-hmm.tex          ← Forward / Viterbi / Baum-Welch
 │   │   ├── B-appendix-oltw.tex
-│   │   └── C-appendix-rl.tex
+│   │   ├── C-appendix-hsmm.tex         ← Forward для HHSMM (Cont 2010)
+│   │   └── D-appendix-rl.tex           ← PPO + GAE pseudocode
 │   │
 │   ├── figures/
-│   │   ├── example.png      ← пример вставки растрового изображения
-│   │   └── tikz/            ← все ч/б TikZ-диаграммы (7 файлов)
+│   │   ├── example.png                 ← пример вставки растрового изображения
+│   │   └── tikz/                       ← все ч/б TikZ-диаграммы (8 файлов)
 │   │       ├── cnn_arch.tex
 │   │       ├── demo_rubato_error.tex
 │   │       ├── demo_tempo_latency.tex
 │   │       ├── dtw_matrix.tex
 │   │       ├── hmm_states.tex
+│   │       ├── notes_example.tex       ← 5-нотный учебный пример
 │   │       ├── pipeline.tex
 │   │       └── rl_agent.tex
 │   │
 │   └── docs/                ← подборки для команды (.md)
-│       ├── literature.md         ← 27 ключевых статей со ссылками
+│       ├── literature.md         ← 35+ ключевых статей со ссылками
 │       ├── datasets.md           ← открытые датасеты + CU-Concerto-2026
 │       ├── competitors.md        ← Cadenza Live, Antescofo и др.
 │       ├── tools.md              ← Python-стек, FluidSynth, JUCE
-│       └── hmm-extensions.md     ← современные расширения HMM
+│       └── hmm-extensions.md     ← HSMM, SSMM, DF, MML/LM3L
 │
-└── src/                     ← исследовательский код (Jupyter, скрипты)
-    └── README.md            ← пояснение, что сюда класть
+└── src/                     ← исследовательский код + MVP приложение
+    ├── README.md            ← пояснение, что внутри
+    └── musictech-app/       ← standalone приложение для score-following
+        ├── README.md
+        ├── ARCHITECTURE.md       ← слои, DTO, граф зависимостей
+        ├── CODE_MAP.md           ← карта файлов с описанием каждого
+        ├── PROJECT_ANALYSIS.md   ← состояние / зависимости / что чинить
+        ├── analysis.md           ← план RL-агента и приоритеты задач
+        ├── start.md              ← как запустить interactive_tester
+        ├── requirements.txt
+        ├── musictech/            ← Python-пакет (12 подпакетов, 30+ модулей)
+        │   ├── core/followers/   ← HMM, HSMM, OLTW, Hybrid (pure-numpy)
+        │   ├── playback/         ← TempoTracker, dispatcher, orchestra
+        │   ├── io/midi/          ← LiveMidiReceiver, MidiEmulator, parser
+        │   ├── preprocessing/    ← midi_to_score
+        │   ├── datasets/         ← synthetic + (будет ASAP/MAESTRO)
+        │   ├── rl/               ← env, state, reward, policy (скелет)
+        │   ├── cli/              ← dataset_viewer, list_midi, main_legacy
+        │   └── …
+        ├── interactive_tester.py ← главное GUI (pygame, 5K строк, legacy)
+        ├── midi_workspace.py     ← импорт пьесы → score.json
+        ├── hybrid_fusion.py …    ← тонкие shim'ы (реэкспорт из musictech.*)
+        ├── midi/                 ← MIDI-библиотека пьес + sample-плеер
+        ├── assets/               ← piano + orchestra-samples (22 MB)
+        ├── generated_dataset/    ← синтетика (создаётся generate_dataset)
+        ├── notebooks/            ← Jupyter-эксперименты
+        └── papers/               ← локальные PDF тезисов
 ```
 
 ---
@@ -75,7 +103,7 @@ music-tech/
 
 - [Roadmap и план работы](ROADMAP.md) — этапы, дедлайны, ответственные.
 - [Содержимое папки со статьёй](article/README.md) — что там и как собирать.
-- [Литература](article/docs/literature.md) — 27 ключевых статей со
+- [Литература](article/docs/literature.md) — 35+ ключевых статей со
   ссылками для скачивания.
 - [Датасеты](article/docs/datasets.md) — MAESTRO, MAPS, MSMD, ASAP,
   Bach10, URMP, MusicNet, SMD, GiantMIDI, ATEPP + собственный
@@ -85,27 +113,35 @@ music-tech/
 - [Стек инструментов](article/docs/tools.md) — Python-библиотеки,
   FluidSynth, JUCE и т.д.
 - [Современные расширения HMM](article/docs/hmm-extensions.md) — HSMM,
-  CRF, Neural HMM, switching SSM, transformer alignment.
+  CRF, Neural HMM, SSMM, DF, MML/LM3L.
 
 ### Сама статья
 
 - [Свежий PDF статьи](article/main.pdf) — открывается прямо в GitHub.
 - [LaTeX-исходники](article/) и [README по сборке](article/README.md).
+- [Тезисы 2-страничные](article/тезисы.pdf).
+
+### Приложение / код
+
+- [src/musictech-app/](src/musictech-app/) — корень MVP.
+- [ARCHITECTURE.md](src/musictech-app/ARCHITECTURE.md) — слои и DTO.
+- [CODE_MAP.md](src/musictech-app/CODE_MAP.md) — карта всех Python-модулей.
+- [PROJECT_ANALYSIS.md](src/musictech-app/PROJECT_ANALYSIS.md) — что есть, что чинить.
+- [start.md](src/musictech-app/start.md) — как запустить GUI.
 
 ---
 
 ## Кто за что отвечает
 
-| Модуль                       | Раздел статьи           | Ответственные                   |
-|------------------------------|-------------------------|---------------------------------|
-| HMM (математика, Forward, Viterbi) | §VI Background, Прил. А | Никита Новицкий, Никита Борисов |
-| OLTW                         | §VI Background, Прил. Б | TBD                             |
-| Real-time / входные данные   | §VIII Real-time pipeline | TBD                             |
-| Датасеты партитур            | §VII Datasets           | TBD                             |
-| Выходной модуль              | §VIII Real-time (output) | TBD                             |
-| Корнер-кейсы                 | §IX Corner cases        | TBD                             |
-| CNN для аудио                | §IX CNN                 | TBD                             |
-| RL-модуль (изюминка)         | §X RL Anticipation, Прил. В | Н. Новицкий + ML            |
+| Модуль                                | Раздел статьи             | Ответственные                   |
+|---------------------------------------|---------------------------|---------------------------------|
+| HMM / HSMM (математика, Forward)      | §3-4, Прил. A             | Никита Новицкий, Никита Борисов |
+| OLTW                                  | §4, Прил. B               | TBD                             |
+| Hybrid (HSMM + OLTW)                  | §4                        | Никита Новицкий                 |
+| Real-time / входные данные (MIDI)     | §3 Formal problem         | TBD                             |
+| Датасеты партитур (ASAP-импортер)     | §2 Related work           | TBD                             |
+| Выходной модуль (оркестровый рендер)  | §7 Proposal               | TBD                             |
+| RL-модуль (изюминка)                  | §5-7, Прил. D             | Никита Новицкий + ML            |
 
 Полное распределение и подробный план — в [ROADMAP.md](ROADMAP.md).
 
@@ -118,7 +154,7 @@ music-tech/
 | 30 апр. 2026  | Полный драфт всех разделов и приложений собран         |
 | 1 мая 2026    | Финальная вычитка, проверка ссылок, формул, орфографии |
 | 2 мая 2026    | Внутренний review ментора, последние правки            |
-| **3 мая 2026** | **SUBMISSION статьи на «Центральный Телеграф»**       |
+| **3 мая 2026** | **SUBMISSION статьи + тезисы на «Научный Телеграф»**  |
 | 4–16 мая 2026 | Слайды, демо-видео прототипа, презентация              |
 | 17 мая 2026   | Доклад на конференции                                  |
 | Лето 2026     | Англоязычная версия и подача на ISMIR 2026             |
@@ -137,16 +173,34 @@ cd article
 
 ---
 
+## Запуск MVP
+
+```powershell
+cd src\musictech-app
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python interactive_tester.py --launcher
+```
+
+Подробности — в [src/musictech-app/start.md](src/musictech-app/start.md).
+
+---
+
 ## Кому первым делом что делать
 
 1. **Прочитать** [ROADMAP.md](ROADMAP.md) (5 минут на содержание +
    30 минут на свой раздел).
 2. Посмотреть свежий [PDF статьи](article/main.pdf) — это текущее
-   состояние.
+   состояние теоретической части.
 3. Открыть [`article/docs/literature.md`](article/docs/literature.md) и
    взять 2–3 статьи из своей зоны ответственности.
 4. Скачать датасеты по списку в
    [`article/docs/datasets.md`](article/docs/datasets.md).
 5. Поставить стек по [`article/docs/tools.md`](article/docs/tools.md).
-6. Зайти в свой каталог в `src/` (Jupyter / эксперименты) и в
-   `article/sections/` (свой раздел статьи) — и начать работу.
+6. Зайти в [`src/musictech-app/`](src/musictech-app/) и прочитать
+   [`ARCHITECTURE.md`](src/musictech-app/ARCHITECTURE.md) +
+   [`CODE_MAP.md`](src/musictech-app/CODE_MAP.md) — это карта по всему
+   коду MVP.
+7. Открыть свой раздел статьи в `article/sections/` и начать работу.

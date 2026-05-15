@@ -1,0 +1,5554 @@
+{
+  "piece_name": "Нервы-На вынос-03-23-2026",
+  "notes": [
+    {
+      "index": 0,
+      "pitches": [
+        51
+      ],
+      "nominal_onset": 5.076918,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 1,
+      "pitches": [
+        51
+      ],
+      "nominal_onset": 5.192302,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 2,
+      "pitches": [
+        51
+      ],
+      "nominal_onset": 5.307687,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 3,
+      "pitches": [
+        51
+      ],
+      "nominal_onset": 5.423071,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 4,
+      "pitches": [
+        55
+      ],
+      "nominal_onset": 5.538456,
+      "nominal_duration": 1.384614
+    },
+    {
+      "index": 5,
+      "pitches": [
+        44
+      ],
+      "nominal_onset": 6.92307,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 6,
+      "pitches": [
+        44
+      ],
+      "nominal_onset": 7.384608,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 7,
+      "pitches": [
+        44
+      ],
+      "nominal_onset": 7.846146,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 8,
+      "pitches": [
+        44
+      ],
+      "nominal_onset": 8.307684,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 9,
+      "pitches": [
+        44
+      ],
+      "nominal_onset": 8.769222,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 10,
+      "pitches": [
+        44
+      ],
+      "nominal_onset": 9.23076,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 11,
+      "pitches": [
+        55
+      ],
+      "nominal_onset": 9.692298,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 12,
+      "pitches": [
+        55
+      ],
+      "nominal_onset": 10.153836,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 13,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 10.615374,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 14,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 10.730759,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 15,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 10.846143,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 16,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 10.961528,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 17,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 11.076912,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 18,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 11.423066,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 19,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 11.53845,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 20,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 11.769219,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 21,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 11.999988,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 22,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 12.230757,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 23,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 12.461526,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 24,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 12.80768,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 25,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 12.923064,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 26,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 13.153833,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 27,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 13.269218,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 28,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 13.384602,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 29,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 13.615371,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 30,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 13.84614,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 31,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 14.192294,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 32,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 14.307678,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 33,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 14.538447,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 34,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 14.769216,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 35,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 14.999985,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 36,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 15.230754,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 37,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 15.576908,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 38,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 15.692292,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 39,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 15.923061,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 40,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 16.038446,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 41,
+      "pitches": [
+        48,
+        50
+      ],
+      "nominal_onset": 16.15383,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 42,
+      "pitches": [
+        45,
+        47
+      ],
+      "nominal_onset": 16.384599,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 43,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 16.615368,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 44,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 16.961522,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 45,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 17.076906,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 46,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 17.307675,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 47,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 17.538444,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 48,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 17.769213,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 49,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 17.999982,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 50,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 18.346136,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 51,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 18.46152,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 52,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 18.692289,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 53,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 18.807673,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 54,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 18.923058,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 55,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 19.153827,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 56,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 19.384596,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 57,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 19.730749,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 58,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 19.846134,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 59,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 20.076903,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 60,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 20.307672,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 61,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 20.538441,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 62,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 20.76921,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 63,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 21.115363,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 64,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 21.230748,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 65,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 21.461517,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 66,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 21.576901,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 67,
+      "pitches": [
+        48,
+        50
+      ],
+      "nominal_onset": 21.692286,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 68,
+      "pitches": [
+        45,
+        47
+      ],
+      "nominal_onset": 21.923055,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 69,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 22.153824,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 70,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 22.499977,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 71,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 22.615362,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 72,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 22.846131,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 73,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 23.0769,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 74,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 23.538438,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 75,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 23.884591,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 76,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 23.999976,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 77,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 24.230745,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 78,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 24.461514,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 79,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 24.923052,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 80,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 25.269205,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 81,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 25.38459,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 82,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 25.615359,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 83,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 25.846128,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 84,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 26.307666,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 85,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 26.653819,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 86,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 26.769204,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 87,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 26.999973,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 88,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 27.230742,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 89,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 27.346126,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 90,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 27.69228,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 91,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 28.038433,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 92,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 28.153818,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 93,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 28.384587,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 94,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 28.615356,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 95,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 29.076894,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 96,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 29.423047,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 97,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 29.538432,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 98,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 29.769201,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 99,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 29.99997,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 100,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 30.461508,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 101,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 30.807661,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 102,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 30.923046,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 103,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 31.153815,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 104,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 31.384584,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 105,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 31.846122,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 106,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 32.192275,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 107,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 32.30766,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 108,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 32.538429,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 109,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 32.653813,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 110,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 32.769198,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 111,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 32.884582,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 112,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 32.999967,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 113,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 33.115351,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 114,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 33.230736,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 115,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 33.576889,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 116,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 33.692274,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 117,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 33.923043,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 118,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 34.153812,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 119,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 34.61535,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 120,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 34.961503,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 121,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 35.076888,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 122,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 35.307657,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 123,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 35.538426,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 124,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 35.999964,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 125,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 36.346117,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 126,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 36.461502,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 127,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 36.692271,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 128,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 36.92304,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 129,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 37.384578,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 130,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 37.730731,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 131,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 37.846116,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 132,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 38.076885,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 133,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 38.307654,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 134,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 38.423038,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 135,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 38.769192,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 136,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 39.115345,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 137,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 39.23073,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 138,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 39.461499,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 139,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 39.692268,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 140,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 40.153806,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 141,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 40.499959,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 142,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 40.615344,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 143,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 40.846113,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 144,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 41.076882,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 145,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 41.53842,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 146,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 41.884573,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 147,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 41.999958,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 148,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 42.230727,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 149,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 42.461496,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 150,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 42.923034,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 151,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 43.269187,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 152,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 43.384572,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 153,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 43.615341,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 154,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 43.730725,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 155,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 43.84611,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 156,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 43.961494,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 157,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 44.076879,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 158,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 44.192263,
+      "nominal_duration": 0.115384
+    },
+    {
+      "index": 159,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 44.307648,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 160,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 44.999955,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 161,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 45.692262,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 162,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 46.384569,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 163,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 47.076876,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 164,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 47.999952,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 165,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 48.230721,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 166,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 48.692259,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 167,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 48.923028,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 168,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 49.153797,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 169,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 49.384566,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 170,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 49.615335,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 171,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 49.846104,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 172,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 50.076873,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 173,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 50.307642,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 174,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 50.538411,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 175,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 50.76918,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 176,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 51.461487,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 177,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 52.153794,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 178,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 52.846101,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 179,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 53.538408,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 180,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 54.461484,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 181,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 54.692253,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 182,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 55.153791,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 183,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 55.38456,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 184,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 55.615329,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 185,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 55.846098,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 186,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 56.076867,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 187,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 56.307636,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 188,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 56.538405,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 189,
+      "pitches": [
+        43
+      ],
+      "nominal_onset": 56.769174,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 190,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 56.999943,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 191,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 57.230712,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 192,
+      "pitches": [
+        38,
+        55
+      ],
+      "nominal_onset": 58.153788,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 193,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 58.846095,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 194,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 59.076864,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 195,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 59.307633,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 196,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 59.538402,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 197,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 59.769171,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 198,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 59.99994,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 199,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 60.230709,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 200,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 60.461478,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 201,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 60.923016,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 202,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 61.615323,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 203,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 61.846092,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 204,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 62.30763,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 205,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 62.538399,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 206,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 62.999937,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 207,
+      "pitches": [
+        36,
+        52
+      ],
+      "nominal_onset": 63.230706,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 208,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 63.692244,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 209,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 63.923013,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 210,
+      "pitches": [
+        36,
+        52
+      ],
+      "nominal_onset": 64.153782,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 211,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 64.384551,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 212,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 64.61532,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 213,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 65.307627,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 214,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 65.999934,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 215,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 66.692241,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 216,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 67.384548,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 217,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 68.307624,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 218,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 68.538393,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 219,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 68.999931,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 220,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 69.2307,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 221,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 69.461469,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 222,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 69.692238,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 223,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 69.923007,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 224,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 70.153776,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 225,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 70.384545,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 226,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 70.615314,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 227,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 70.846083,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 228,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 71.076852,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 229,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 71.423006,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 230,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 71.53839,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 231,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 71.769159,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 232,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 71.999928,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 233,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 72.461466,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 234,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 72.80762,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 235,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 72.923004,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 236,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 73.153773,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 237,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 73.384542,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 238,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 73.84608,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 239,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 74.192234,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 240,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 74.307618,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 241,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 74.538387,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 242,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 74.769156,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 243,
+      "pitches": [
+        38,
+        43
+      ],
+      "nominal_onset": 75.230694,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 244,
+      "pitches": [
+        38,
+        43
+      ],
+      "nominal_onset": 75.576848,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 245,
+      "pitches": [
+        38,
+        43
+      ],
+      "nominal_onset": 75.923001,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 246,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 76.615308,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 247,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 76.961462,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 248,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 77.076846,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 249,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 77.307615,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 250,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 77.538384,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 251,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 77.999922,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 252,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 78.346076,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 253,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 78.46146,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 254,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 78.692229,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 255,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 78.922998,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 256,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 79.384536,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 257,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 79.73069,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 258,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 79.846074,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 259,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 80.076843,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 260,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 80.307612,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 261,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 80.76915,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 262,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 81.115304,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 263,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 81.230688,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 264,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 81.461457,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 265,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 81.692226,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 266,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 82.153764,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 267,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 82.499918,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 268,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 82.615302,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 269,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 82.846071,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 270,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 83.07684,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 271,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 83.538378,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 272,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 83.884532,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 273,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 83.999916,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 274,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 84.230685,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 275,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 84.461454,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 276,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 84.922992,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 277,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 85.269146,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 278,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 85.38453,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 279,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 85.615299,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 280,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 85.846068,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 281,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 86.307606,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 282,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 86.65376,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 283,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 86.769144,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 284,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 86.999913,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 285,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 87.115298,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 286,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 87.230682,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 287,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 87.346067,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 288,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 87.461451,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 289,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 87.576836,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 290,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 87.69222,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 291,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 88.038374,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 292,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 88.153758,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 293,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 88.384527,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 294,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 88.615296,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 295,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 89.076834,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 296,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 89.422988,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 297,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 89.538372,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 298,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 89.769141,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 299,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 89.99991,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 300,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 90.461448,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 301,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 90.807602,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 302,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 90.922986,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 303,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 91.153755,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 304,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 91.384524,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 305,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 91.846062,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 306,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 92.192216,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 307,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 92.3076,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 308,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 92.538369,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 309,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 92.769138,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 310,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 93.230676,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 311,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 93.57683,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 312,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 93.692214,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 313,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 93.922983,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 314,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 94.153752,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 315,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 94.61529,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 316,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 94.961444,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 317,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 95.076828,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 318,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 95.307597,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 319,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 95.538366,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 320,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 95.999904,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 321,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 96.346058,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 322,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 96.461442,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 323,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 96.692211,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 324,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 96.92298,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 325,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 97.384518,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 326,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 97.730672,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 327,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 97.846056,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 328,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 98.076825,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 329,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 98.19221,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 330,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 98.307594,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 331,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 98.422979,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 332,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 98.538363,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 333,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 98.653748,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 334,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 98.769132,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 335,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 99.461439,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 336,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 100.153746,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 337,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 100.846053,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 338,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 101.53836,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 339,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 102.461436,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 340,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 102.692205,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 341,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 103.153743,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 342,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 103.384512,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 343,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 103.615281,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 344,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 103.84605,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 345,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 104.076819,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 346,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 104.307588,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 347,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 104.538357,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 348,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 104.769126,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 349,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 104.999895,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 350,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 105.230664,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 351,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 105.922971,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 352,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 106.615278,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 353,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 107.307585,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 354,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 107.999892,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 355,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 108.922968,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 356,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 109.153737,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 357,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 109.615275,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 358,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 109.846044,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 359,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 110.076813,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 360,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 110.307582,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 361,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 110.538351,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 362,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 110.76912,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 363,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 110.999889,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 364,
+      "pitches": [
+        43
+      ],
+      "nominal_onset": 111.230658,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 365,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 111.461427,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 366,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 111.692196,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 367,
+      "pitches": [
+        38,
+        55
+      ],
+      "nominal_onset": 112.615272,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 368,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 113.307579,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 369,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 113.538348,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 370,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 113.769117,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 371,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 113.999886,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 372,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 114.230655,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 373,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 114.461424,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 374,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 114.692193,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 375,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 114.922962,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 376,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 115.3845,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 377,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 116.076807,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 378,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 116.307576,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 379,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 116.769114,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 380,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 116.999883,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 381,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 117.461421,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 382,
+      "pitches": [
+        36,
+        52
+      ],
+      "nominal_onset": 117.69219,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 383,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 118.153728,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 384,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 118.384497,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 385,
+      "pitches": [
+        36,
+        52
+      ],
+      "nominal_onset": 118.615266,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 386,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 118.846035,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 387,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 119.076804,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 388,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 119.769111,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 389,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 120.461418,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 390,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 121.153725,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 391,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 121.846032,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 392,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 122.30757,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 393,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 122.769108,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 394,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 122.999877,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 395,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 123.461415,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 396,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 123.692184,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 397,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 123.922953,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 398,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 124.153722,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 399,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 124.384491,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 400,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 124.61526,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 401,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 124.846029,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 402,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 125.076798,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 403,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 125.307567,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 404,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 125.538336,
+      "nominal_duration": 0.346153
+    },
+    {
+      "index": 405,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 125.88449,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 406,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 125.999874,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 407,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 126.230643,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 408,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 126.461412,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 409,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 127.153719,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 410,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 127.499873,
+      "nominal_duration": 0.807692
+    },
+    {
+      "index": 411,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 128.307564,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 412,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 128.538333,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 413,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 128.884487,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 414,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 129.23064,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 415,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 129.692178,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 416,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 130.153716,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 417,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 130.384485,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 418,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 130.615254,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 419,
+      "pitches": [
+        48
+      ],
+      "nominal_onset": 131.076792,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 420,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 131.422946,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 421,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 131.769099,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 422,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 131.999868,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 423,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 132.346022,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 424,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 132.692175,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 425,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 133.038329,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 426,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 133.153713,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 427,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 133.384482,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 428,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 133.615251,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 429,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 134.307558,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 430,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 134.653712,
+      "nominal_duration": 0.807692
+    },
+    {
+      "index": 431,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 135.461403,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 432,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 135.692172,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 433,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 136.038326,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 434,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 136.384479,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 435,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 136.846017,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 436,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 137.307555,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 437,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 137.538324,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 438,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 137.769093,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 439,
+      "pitches": [
+        48
+      ],
+      "nominal_onset": 138.230631,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 440,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 138.576785,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 441,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 138.922938,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 442,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 139.153707,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 443,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 139.499861,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 444,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 139.846014,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 445,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 140.192168,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 446,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 140.307552,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 447,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 140.538321,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 448,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 140.76909,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 449,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 141.461397,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 450,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 141.807551,
+      "nominal_duration": 0.807692
+    },
+    {
+      "index": 451,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 142.615242,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 452,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 142.846011,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 453,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 143.192165,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 454,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 143.538318,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 455,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 143.999856,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 456,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 144.461394,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 457,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 144.692163,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 458,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 144.922932,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 459,
+      "pitches": [
+        48
+      ],
+      "nominal_onset": 145.38447,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 460,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 145.730624,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 461,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 146.076777,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 462,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 146.307546,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 463,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 146.6537,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 464,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 146.999853,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 465,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 147.346007,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 466,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 147.461391,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 467,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 147.69216,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 468,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 147.922929,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 469,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 148.615236,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 470,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 148.96139,
+      "nominal_duration": 0.807692
+    },
+    {
+      "index": 471,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 149.769081,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 472,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 149.99985,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 473,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 150.346004,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 474,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 150.692157,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 475,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 151.153695,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 476,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 151.615233,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 477,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 151.846002,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 478,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 152.076771,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 479,
+      "pitches": [
+        48
+      ],
+      "nominal_onset": 152.538309,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 480,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 152.884463,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 481,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 153.230616,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 482,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 153.461385,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 483,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 153.807539,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 484,
+      "pitches": [
+        49
+      ],
+      "nominal_onset": 154.153692,
+      "nominal_duration": 5.538456
+    },
+    {
+      "index": 485,
+      "pitches": [
+        51
+      ],
+      "nominal_onset": 159.692148,
+      "nominal_duration": 5.076918
+    },
+    {
+      "index": 486,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 164.769066,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 487,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.230604,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 488,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.345989,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 489,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.461373,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 490,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.576758,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 491,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.692142,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 492,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.807527,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 493,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 165.922911,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 494,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.038296,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 495,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.15368,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 496,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.269065,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 497,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.384449,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 498,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.499834,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 499,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.615218,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 500,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.730603,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 501,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.845987,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 502,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 166.961372,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 503,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.076756,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 504,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.192141,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 505,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.307525,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 506,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.42291,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 507,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.538294,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 508,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.653679,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 509,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.769063,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 510,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.884448,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 511,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 167.999832,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 512,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.115217,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 513,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.230601,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 514,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.345986,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 515,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.46137,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 516,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.576755,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 517,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.692139,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 518,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.807524,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 519,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 168.922908,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 520,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.038293,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 521,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.153677,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 522,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.269062,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 523,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.384446,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 524,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.499831,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 525,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.615215,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 526,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.7306,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 527,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.845984,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 528,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 169.961369,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 529,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.076753,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 530,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.192138,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 531,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.307522,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 532,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.422907,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 533,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.538291,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 534,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.653676,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 535,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 170.76906,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 536,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.884445,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 537,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 170.999829,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 538,
+      "pitches": [
+        36,
+        38,
+        42
+      ],
+      "nominal_onset": 171.115214,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 539,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 171.230598,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 540,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 171.345983,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 541,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 171.461367,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 542,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 171.576752,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 543,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 171.692136,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 544,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 171.807521,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 545,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 171.922905,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 546,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.03829,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 547,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 172.153674,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 548,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.269059,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 549,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.384443,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 550,
+      "pitches": [
+        36,
+        38,
+        42
+      ],
+      "nominal_onset": 172.499828,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 551,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.615212,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 552,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.730597,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 553,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.845981,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 554,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 172.961366,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 555,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 173.07675,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 556,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 173.192135,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 557,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 173.307519,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 558,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 173.422904,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 559,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 173.538288,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 560,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 173.653673,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 561,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 173.769057,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 562,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 173.884442,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 563,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 173.999826,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 564,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 174.115211,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 565,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 174.230595,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 566,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 174.34598,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 567,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 174.461364,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 568,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 174.576749,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 569,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 174.692133,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 570,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 174.807518,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 571,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 174.922902,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 572,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 175.038287,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 573,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 175.153671,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 574,
+      "pitches": [
+        36,
+        38
+      ],
+      "nominal_onset": 175.269056,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 575,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 175.38444,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 576,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 175.499825,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 577,
+      "pitches": [
+        48
+      ],
+      "nominal_onset": 175.615209,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 578,
+      "pitches": [
+        48
+      ],
+      "nominal_onset": 175.730594,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 579,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 175.845978,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 580,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 175.961363,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 581,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 176.076747,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 582,
+      "pitches": [
+        45
+      ],
+      "nominal_onset": 176.192132,
+      "nominal_duration": 0.115385
+    },
+    {
+      "index": 583,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 176.307516,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 584,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 176.999823,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 585,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 177.69213,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 586,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 178.384437,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 587,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 179.076744,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 588,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 179.99982,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 589,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 180.230589,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 590,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 180.692127,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 591,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 180.922896,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 592,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 181.153665,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 593,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 181.384434,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 594,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 181.615203,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 595,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 181.845972,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 596,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 182.076741,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 597,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 182.30751,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 598,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 182.538279,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 599,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 182.769048,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 600,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 183.461355,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 601,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 184.153662,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 602,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 184.845969,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 603,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 185.538276,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 604,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 186.461352,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 605,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 186.692121,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 606,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 187.153659,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 607,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 187.384428,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 608,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 187.615197,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 609,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 187.845966,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 610,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 188.076735,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 611,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 188.307504,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 612,
+      "pitches": [
+        47
+      ],
+      "nominal_onset": 188.538273,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 613,
+      "pitches": [
+        43
+      ],
+      "nominal_onset": 188.769042,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 614,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 188.999811,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 615,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 189.23058,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 616,
+      "pitches": [
+        38,
+        55
+      ],
+      "nominal_onset": 190.153656,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 617,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 190.845963,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 618,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 191.076732,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 619,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 191.307501,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 620,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 191.53827,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 621,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 191.769039,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 622,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 191.999808,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 623,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 192.230577,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 624,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 192.461346,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 625,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 192.922884,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 626,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 193.615191,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 627,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 193.84596,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 628,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 194.307498,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 629,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 194.538267,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 630,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 194.999805,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 631,
+      "pitches": [
+        36,
+        52
+      ],
+      "nominal_onset": 195.230574,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 632,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 195.692112,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 633,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 195.922881,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 634,
+      "pitches": [
+        36,
+        52
+      ],
+      "nominal_onset": 196.15365,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 635,
+      "pitches": [
+        38,
+        52
+      ],
+      "nominal_onset": 196.384419,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 636,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 196.615188,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 637,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 197.307495,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 638,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 197.999802,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 639,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 198.692109,
+      "nominal_duration": 0.692307
+    },
+    {
+      "index": 640,
+      "pitches": [
+        36,
+        55
+      ],
+      "nominal_onset": 199.384416,
+      "nominal_duration": 0.923076
+    },
+    {
+      "index": 641,
+      "pitches": [
+        38,
+        46
+      ],
+      "nominal_onset": 200.307492,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 642,
+      "pitches": [
+        46
+      ],
+      "nominal_onset": 200.538261,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 643,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 200.999799,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 644,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 201.230568,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 645,
+      "pitches": [
+        38
+      ],
+      "nominal_onset": 201.461337,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 646,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 201.692106,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 647,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 201.922875,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 648,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 202.153644,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 649,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 202.384413,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 650,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 202.615182,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 651,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 202.845951,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 652,
+      "pitches": [
+        36,
+        42
+      ],
+      "nominal_onset": 203.07672,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 653,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 203.307489,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 654,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 203.769027,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 655,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 203.999796,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 656,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 204.230565,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 657,
+      "pitches": [
+        36
+      ],
+      "nominal_onset": 204.461334,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 658,
+      "pitches": [
+        42
+      ],
+      "nominal_onset": 204.692103,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 659,
+      "pitches": [
+        38,
+        42
+      ],
+      "nominal_onset": 205.153641,
+      "nominal_duration": 0.230769
+    },
+    {
+      "index": 660,
+      "pitches": [
+        38,
+        48
+      ],
+      "nominal_onset": 205.38441,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 661,
+      "pitches": [
+        38,
+        45
+      ],
+      "nominal_onset": 205.730564,
+      "nominal_duration": 0.346154
+    },
+    {
+      "index": 662,
+      "pitches": [
+        38,
+        48
+      ],
+      "nominal_onset": 206.076717,
+      "nominal_duration": 0.461538
+    },
+    {
+      "index": 663,
+      "pitches": [
+        36,
+        46
+      ],
+      "nominal_onset": 206.538255,
+      "nominal_duration": 0.692277
+    }
+  ]
+}

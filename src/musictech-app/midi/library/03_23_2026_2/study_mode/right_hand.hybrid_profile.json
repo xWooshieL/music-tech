@@ -1,0 +1,63 @@
+{
+  "format_version": 2,
+  "score_json": "D:\\Projects-13-03-2026\\piano\\midi\\library\\03_23_2026_2\\study_mode\\right_hand.json",
+  "generated_at": "2026-05-14T23:51:16.641485+00:00",
+  "tuning": {
+    "output_confirmation_events": 3,
+    "sigma": 2.5
+  },
+  "baseline_metrics": {
+    "objective": 8148.034492841582,
+    "offset_segments": 7,
+    "jump_segments": 6,
+    "offset_average_error": 27.42178426926326,
+    "offset_max_error": 134,
+    "offset_final_error_sum": 140,
+    "jump_average_error": 4.850595238095238,
+    "jump_max_error": 35,
+    "jump_final_error_sum": 6,
+    "jump_within5_mean": 6.5,
+    "jump_within5_max": 15,
+    "jump_failures": 0,
+    "steady_tempo_abs_dev": 0.19361611311191085
+  },
+  "best_metrics": {
+    "objective": 8143.943428571428,
+    "offset_segments": 7,
+    "jump_segments": 6,
+    "offset_average_error": 27.427544351073763,
+    "offset_max_error": 134,
+    "offset_final_error_sum": 140,
+    "jump_average_error": 4.9194852941176475,
+    "jump_max_error": 35,
+    "jump_final_error_sum": 6,
+    "jump_within5_mean": 6.5,
+    "jump_within5_max": 15,
+    "jump_failures": 0,
+    "steady_tempo_abs_dev": 0.18339202347605638
+  },
+  "calibration": {
+    "level": "fast",
+    "modes": [
+      "clean"
+    ],
+    "starts": [
+      0,
+      16,
+      33,
+      50,
+      67,
+      101,
+      134
+    ],
+    "offset_states": 260,
+    "max_starts": 7,
+    "jump_states": 80,
+    "jump_prime_states": 24,
+    "passes": 1,
+    "sigma": 2.5,
+    "search_preset": "quick",
+    "max_jump_scenarios": 6,
+    "parallel_workers": 1
+  }
+}

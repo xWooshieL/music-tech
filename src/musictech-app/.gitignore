@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+tmp/
+.vendor/
+assets/orchestra_samples/*.zip
+assets/orchestra_samples/cache/
+interactive_tester_settings.json

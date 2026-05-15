@@ -19,8 +19,15 @@
 .DS_Store
 Thumbs.db
 
-# NB: article/main.pdf IS tracked so collaborators can preview the
-# current state of the paper directly on GitHub without compiling.
+# Python (research code, app code, notebooks)
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+**/.venv/
+.vendor/
+**/.vendor/
 
 # Local raw template snapshot - kept locally only
 ismir-template-raw/
@@ -28,7 +35,9 @@ ismir-template-raw/
 # Local extracted text dumps
 musictech_text.txt
 
-# Notebook checkpoints
-.ipynb_checkpoints/
-__pycache__/
-*.pyc
+# Pixi / poetry / pip lockfiles produced in the venv
+pip-wheel-metadata/
+*.egg-info/
+
+# NB: article/main.pdf IS tracked so collaborators can preview the
+# current state of the paper directly on GitHub without compiling.
