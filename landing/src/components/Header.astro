@@ -46,19 +46,18 @@ const nav = [
     </nav>
 
     <div class="flex items-center gap-2 shrink-0">
-      <!-- desktop CTA -->
-      <a href={`${base}/login`} data-auth="anon" class="btn-ghost hidden sm:inline-flex">Войти</a>
-      <a href={`${base}/account`} data-auth="user" class="btn-ghost hidden sm:inline-flex">Кабинет</a>
-      <a href={`${base}/admin`} data-auth="admin" class="btn-ghost hidden sm:inline-flex !text-red-700">Админ</a>
-      <button type="button" data-auth="user" data-logout="1" class="btn-ghost hidden sm:inline-flex">
-        Выйти
-      </button>
-      <a href="#download" data-anchor="1" class="btn-primary hidden sm:inline-flex">
-        Скачать
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 5v14" /><path d="M19 12l-7 7-7-7" />
-        </svg>
+      <!-- единственная auth-кнопка: меняет текст и href в зависимости от того,
+           авторизован пользователь или нет. для гостей - "Войти" → /login,
+           для залогиненных - "Личный кабинет" → /account. больше никаких
+           кнопок в шапке нет: ни админки, ни выхода, ни 'кабинет' отдельно. -->
+      <a
+        id="auth-cta"
+        href={`${base}/login`}
+        class="btn-primary hidden sm:inline-flex"
+        data-href-anon={`${base}/login`}
+        data-href-user={`${base}/account`}
+      >
+        Войти
       </a>
 
       <!-- mobile hamburger -->
@@ -100,14 +99,15 @@ const nav = [
         </a>
       ))}
       <hr class="my-2 border-ink-200" />
-      <a href={`${base}/login`}    data-auth="anon"  class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-ink-800 hover:bg-ink-50">Войти</a>
-      <a href={`${base}/register`} data-auth="anon"  class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-ink-800 hover:bg-ink-50">Регистрация</a>
-      <a href={`${base}/account`}  data-auth="user"  class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-ink-800 hover:bg-ink-50">Личный кабинет</a>
-      <a href={`${base}/admin`}    data-auth="admin" class="mobile-link block px-3 py-3 rounded-lg text-base font-medium text-red-700 hover:bg-red-50">Админка</a>
-      <button type="button" data-auth="user" data-logout="1" class="mobile-link block w-full text-left px-3 py-3 rounded-lg text-base font-medium text-ink-800 hover:bg-ink-50">
-        Выйти
-      </button>
-      <a href="#download" data-anchor="1" class="btn-primary mt-2 mobile-link">Скачать MusicTech</a>
+      <a
+        id="auth-cta-mobile"
+        href={`${base}/login`}
+        class="btn-primary mt-2 mobile-link"
+        data-href-anon={`${base}/login`}
+        data-href-user={`${base}/account`}
+      >
+        Войти
+      </a>
     </div>
   </nav>
 </header>
@@ -154,56 +154,42 @@ const nav = [
     });
   })();
 
-  // ───────────── показываем нужные кнопки auth-состояния ─────────────
-  // правила:
-  //   anon   - незалогиненный (виден только если нет токена)
-  //   user   - залогиненный (любой пользователь)
-  //   admin  - админ-кнопка появляется ТОЛЬКО после того как сервер
-  //            подтвердил роль admin через /api/auth/me. это защита от
-  //            подделки роли через localStorage.
+  // ───────────── единственная auth-кнопка в шапке ─────────────
+  // правила (без вариантов):
+  //   гость         → "Войти"          → /login
+  //   авторизован   → "Личный кабинет" → /account
+  // никаких 'Админ', 'Выйти', 'Кабинет' рядом не существует. админка
+  // и выход доступны только изнутри /account.
   (function () {
-    // быстрый первичный рендер на основе одного только наличия токена.
-    // НЕ читаем role - её ставит только сервер.
-    function applyAuthInitial() {
-      const hasToken = !!localStorage.getItem("musictech.token");
-      document.querySelectorAll("[data-auth]").forEach((el) => {
-        const want = el.getAttribute("data-auth");
-        if (want === "anon")  el.classList.toggle("hidden", hasToken);
-        if (want === "user")  el.classList.toggle("hidden", !hasToken);
-        if (want === "admin") el.classList.add("hidden"); // всегда скрыто до подтверждения
+    function safeGet(key) {
+      try { return localStorage.getItem(key); } catch { return null; }
+    }
+    function safeRemove(key) {
+      try { localStorage.removeItem(key); } catch {}
+    }
+    function safeSet(key, val) {
+      try { localStorage.setItem(key, val); } catch {}
+    }
+
+    const ctas = Array.from(document.querySelectorAll("#auth-cta, #auth-cta-mobile"));
+    if (!ctas.length) return;
+
+    function setMode(mode) {
+      // mode: 'anon' | 'user'
+      const label = mode === "user" ? "Личный кабинет" : "Войти";
+      ctas.forEach((el) => {
+        const href = el.getAttribute(mode === "user" ? "data-href-user" : "data-href-anon");
+        if (href) el.setAttribute("href", href);
+        el.textContent = label;
       });
     }
 
-    function applyAuthVerified(role) {
-      document.querySelectorAll('[data-auth="admin"]').forEach((el) => {
-        el.classList.toggle("hidden", role !== "admin");
-      });
-    }
+    // первичный рендер по наличию токена в localStorage
+    const token = safeGet("musictech.token");
+    setMode(token ? "user" : "anon");
 
-    function logout() {
-      const token = localStorage.getItem("musictech.token") || "";
-      const headers = { "content-type": "application/json" };
-      if (token) headers.authorization = "Bearer " + token;
-      fetch("/api/auth/logout", { method: "POST", headers, credentials: "include" })
-        .finally(() => {
-          localStorage.removeItem("musictech.token");
-          localStorage.removeItem("musictech.email");
-          localStorage.removeItem("musictech.name");
-          localStorage.removeItem("musictech.role");
-          location.href = "/";
-        });
-    }
-
-    // первичный прогон до сетевого запроса
-    applyAuthInitial();
-
-    // вешаем logout на любую кнопку с data-logout
-    document.querySelectorAll("[data-logout='1']").forEach((el) => {
-      el.addEventListener("click", (e) => { e.preventDefault(); logout(); });
-    });
-
-    // если токена нет - сервер не дёргаем, оставляем гостевую раскладку
-    const token = localStorage.getItem("musictech.token");
+    // если токен есть - сверяем с сервером, чтобы при истёкшем токене
+    // вернуть гостевой режим. роль в шапке не показываем никак.
     if (!token) return;
 
     fetch("/api/auth/me", {
@@ -212,21 +198,19 @@ const nav = [
     })
       .then((r) => r.json())
       .then((b) => {
-        if (b?.ok && b?.user) {
-          // обновляем кэш и показываем admin-кнопку только если сервер подтвердил
-          localStorage.setItem("musictech.email", b.user.email);
-          localStorage.setItem("musictech.name",  b.user.name || "");
-          localStorage.setItem("musictech.role",  b.user.role || "user");
-          applyAuthVerified(b.user.role || "user");
+        if (b && b.ok && b.user) {
+          safeSet("musictech.email", b.user.email);
+          safeSet("musictech.name",  b.user.name || "");
+          safeSet("musictech.role",  b.user.role || "user");
+          setMode("user");
         } else {
-          // токен невалиден - чистим, переключаем на гостевую раскладку
-          localStorage.removeItem("musictech.token");
-          localStorage.removeItem("musictech.role");
-          applyAuthInitial();
+          safeRemove("musictech.token");
+          safeRemove("musictech.email");
+          safeRemove("musictech.name");
+          safeRemove("musictech.role");
+          setMode("anon");
         }
       })
-      .catch(() => {
-        // сетевые ошибки игнорируем, остаёмся в user-режиме без admin
-      });
+      .catch(() => { /* офлайн — оставляем как есть */ });
   })();
 </script>
