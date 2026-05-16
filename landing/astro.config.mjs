@@ -1,14 +1,21 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import vercel from "@astrojs/vercel";
 
-const isPages = process.env.DEPLOY_TARGET === "gh-pages";
-
+// деплоимся на Vercel: статика собирается в .vercel/output/static,
+// API-эндпоинты упаковываются как serverless functions
 export default defineConfig({
-  // если деплоим на github pages — путь до подпапки /music-tech/
-  site: isPages ? "https://nizier193.github.io" : "https://musictech.art",
-  base: isPages ? "/music-tech" : "/",
-  output: "static",
+  site: process.env.APP_URL || "https://musictech.art",
+  base: "/",
+
+  output: "server",
+  adapter: vercel({
+    webAnalytics: { enabled: false },
+    imageService: false,
+    maxDuration: 10,
+  }),
+
   trailingSlash: "ignore",
   integrations: [
     tailwind({

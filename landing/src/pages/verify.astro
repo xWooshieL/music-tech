@@ -1,0 +1,146 @@
+---
+import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Base title="Подтверждение e-mail — MusicTech" description="Введите 6-значный код из письма для подтверждения аккаунта.">
+  <section class="container-soft py-20 md:py-28">
+    <div class="reveal mx-auto max-w-md">
+      <div class="text-center mb-8">
+        <span class="pill">подтверждение</span>
+        <h1 class="mt-4 font-display text-4xl font-bold text-ink-900 tracking-tight">
+          Введите код из письма
+        </h1>
+        <p id="verify-email-hint" class="mt-2 text-ink-600">
+          Мы отправили 6-значный код на ваш e-mail.
+        </p>
+      </div>
+
+      <form id="verify-form" class="card space-y-5">
+        <input id="verify-email" type="hidden" name="email" />
+
+        <label class="block">
+          <span class="block text-sm font-semibold text-ink-800 mb-1.5">Код подтверждения</span>
+          <input
+            name="code"
+            type="text"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            pattern="\d{6}"
+            maxlength="6"
+            required
+            placeholder="123456"
+            class="w-full rounded-xl border border-ink-200 px-4 py-3 text-xl text-center
+                   font-mono tracking-[0.5em] bg-white focus:border-brand-500
+                   focus:ring focus:ring-brand-100 outline-none transition"
+          />
+          <span class="block mt-1.5 text-xs text-ink-500">
+            код действует 10 минут, осталось до 5 попыток
+          </span>
+        </label>
+
+        <button type="submit" id="verify-submit" class="btn-primary w-full text-base py-3.5">
+          Подтвердить и войти
+        </button>
+
+        <p
+          id="verify-error"
+          class="hidden text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2"
+        ></p>
+      </form>
+
+      <p class="mt-6 text-center text-sm text-ink-500">
+        Письмо не пришло?
+        <button id="resend-btn" class="link font-medium" type="button">
+          Отправить ещё раз
+        </button>
+        ·
+        <a href={`${base}/register`} class="link font-medium">сменить e-mail</a>
+      </p>
+    </div>
+  </section>
+
+  <script is:inline>
+    // подхватываем email из ?email=... или sessionStorage
+    const params = new URLSearchParams(location.search);
+    const email =
+      params.get("email") ||
+      sessionStorage.getItem("musictech.pending_email") ||
+      "";
+
+    const emailInput = document.getElementById("verify-email");
+    const emailHint  = document.getElementById("verify-email-hint");
+    if (emailInput) emailInput.value = email;
+    if (emailHint && email) {
+      emailHint.innerHTML = "Мы отправили 6-значный код на <b>" + escapeHtml(email) + "</b>.";
+    }
+
+    const form    = document.getElementById("verify-form");
+    const error   = document.getElementById("verify-error");
+    const submit  = document.getElementById("verify-submit");
+
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!error || !submit) return;
+      error.classList.add("hidden");
+      submit.textContent = "Проверяем код...";
+      submit.setAttribute("disabled", "disabled");
+
+      const data = new FormData(form);
+      const code = String(data.get("code") || "").replace(/\D/g, "");
+      const payload = { email, code };
+
+      try {
+        const res = await fetch("/api/auth/verify", {
+          method:  "POST",
+          headers: { "content-type": "application/json" },
+          body:    JSON.stringify(payload),
+        });
+        const body = await res.json();
+        if (!res.ok || !body?.ok) {
+          throw new Error(body?.error || `ошибка ${res.status}`);
+        }
+        // сохраняем токен для приложения
+        localStorage.setItem("musictech.token", body.token);
+        localStorage.setItem("musictech.email", email);
+        if (body.name) localStorage.setItem("musictech.name", body.name);
+        sessionStorage.removeItem("musictech.pending_email");
+        sessionStorage.removeItem("musictech.pending_name");
+
+        const baseUrl = location.pathname.replace(/\/verify\/?$/, "");
+        window.location.href = `${baseUrl}/download?welcome=1`;
+      } catch (err) {
+        error.textContent = err.message;
+        error.classList.remove("hidden");
+        submit.textContent = "Подтвердить и войти";
+        submit.removeAttribute("disabled");
+      }
+    });
+
+    // повторная отправка кода
+    document.getElementById("resend-btn")?.addEventListener("click", async () => {
+      if (!email) return;
+      const name = sessionStorage.getItem("musictech.pending_name") || "user";
+      try {
+        const res = await fetch("/api/auth/register", {
+          method:  "POST",
+          headers: { "content-type": "application/json" },
+          body:    JSON.stringify({
+            name,
+            email,
+            password: "x".repeat(8), // фейк, чтобы пройти валидацию: на сервере получим 409
+          }),
+        });
+        const body = await res.json();
+        alert(body?.message || body?.error || "запрос отправлен");
+      } catch {
+        alert("не удалось отправить повторно, попробуйте позже");
+      }
+    });
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] || c);
+    }
+  </script>
+</Base>

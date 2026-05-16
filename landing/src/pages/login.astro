@@ -40,7 +40,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <label class="block">
           <span class="flex items-center justify-between text-sm font-semibold text-ink-800 mb-1.5">
             <span>Пароль</span>
-            <a href="#" class="text-xs font-medium link">забыли пароль?</a>
+            <a href={`${base}/forgot-password`} class="text-xs font-medium link">забыли пароль?</a>
           </span>
           <input
             name="password"
@@ -95,10 +95,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     </div>
   </section>
 
-  <script>
-    // mock-авторизация, чтобы проверить flow без реального backend
-    const form = document.getElementById("login-form") as HTMLFormElement | null;
-    const errorBox = document.getElementById("login-error") as HTMLParagraphElement | null;
+  <script is:inline>
+    const form     = document.getElementById("login-form");
+    const errorBox = document.getElementById("login-error");
 
     form?.addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -106,7 +105,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       errorBox.classList.add("hidden");
 
       const data = new FormData(form);
-      const email = String(data.get("email") || "");
+      const email    = String(data.get("email")    || "").trim();
       const password = String(data.get("password") || "");
 
       if (!email.includes("@") || password.length < 6) {
@@ -115,21 +114,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         return;
       }
 
-      // в реальной системе тут будет POST /api/auth/login
-      // сейчас имитируем успех с подделкой jwt
-      const token =
-        "musictech." + btoa(email).replace(/=+$/, "") + "." + btoa(Date.now().toString()).replace(/=+$/, "");
-
       try {
-        localStorage.setItem("musictech.token", token);
+        const res = await fetch("/api/auth/login", {
+          method:  "POST",
+          headers: { "content-type": "application/json" },
+          body:    JSON.stringify({ email, password }),
+        });
+        const body = await res.json();
+        if (!res.ok || !body?.ok) {
+          throw new Error(body?.error || `ошибка ${res.status}`);
+        }
+        localStorage.setItem("musictech.token", body.token);
         localStorage.setItem("musictech.email", email);
-      } catch {
-        /* пользователь отключил localStorage - пропускаем */
-      }
+        if (body.name) localStorage.setItem("musictech.name", body.name);
 
-      // приложение читает этот же токен из деплинка musictech://auth?token=...
-      const base = (document.querySelector('meta[name="base"]') as HTMLMetaElement | null)?.content || "";
-      window.location.href = `${base}/download?ok=1`;
+        const baseUrl = location.pathname.replace(/\/login\/?$/, "");
+        window.location.href = `${baseUrl}/download?ok=1`;
+      } catch (err) {
+        errorBox.textContent = err.message;
+        errorBox.classList.remove("hidden");
+      }
     });
   </script>
 </Base>

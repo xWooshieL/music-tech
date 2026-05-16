@@ -1,6 +1,7 @@
 # MusicTech — Real-Time Score Following
 
-[![landing](https://img.shields.io/badge/landing-musictech.art-10b981?style=flat-square&logo=astro&logoColor=white)](https://nizier193.github.io/music-tech/)
+[![landing](https://img.shields.io/badge/landing-musictech.art-10b981?style=flat-square&logo=vercel&logoColor=white)](https://musictech.art)
+[![auth](https://img.shields.io/badge/auth-Resend%20%2B%20Upstash-059669?style=flat-square)](https://github.com/Nizier193/music-tech/tree/master/landing)
 [![paper](https://img.shields.io/badge/paper-PDF-blue?style=flat-square)](https://github.com/Nizier193/music-tech/blob/master/article/main.pdf)
 [![talk](https://img.shields.io/badge/slides-PDF-orange?style=flat-square)](https://github.com/Nizier193/music-tech/blob/master/article/presentation/presentation.pdf)
 [![code](https://img.shields.io/badge/code-MVP-black?style=flat-square&logo=python)](https://github.com/Nizier193/music-tech/tree/master/src/musictech-app)

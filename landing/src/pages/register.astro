@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 <Base
   title="Регистрация — MusicTech"
-  description="Создайте аккаунт MusicTech — один логин для сайта и десктопного приложения."
+  description="Создайте аккаунт MusicTech — на ваш e-mail придёт 6-значный код подтверждения."
 >
   <section class="container-soft py-20 md:py-28">
     <div class="reveal mx-auto max-w-md">
@@ -74,9 +74,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
           </span>
         </label>
 
-        <button type="submit" class="btn-primary w-full text-base py-3.5">
-          Создать аккаунт
+        <button type="submit" id="reg-submit" class="btn-primary w-full text-base py-3.5">
+          Отправить код на e-mail
         </button>
+
+        <p
+          id="reg-error"
+          class="hidden text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2"
+        ></p>
       </form>
 
       <p class="mt-6 text-center text-sm text-ink-500">
@@ -85,18 +90,45 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     </div>
   </section>
 
-  <script>
-    const form = document.getElementById("reg-form") as HTMLFormElement | null;
-    form?.addEventListener("submit", (event) => {
+  <script is:inline>
+    const form    = document.getElementById("reg-form");
+    const error   = document.getElementById("reg-error");
+    const submit  = document.getElementById("reg-submit");
+
+    form?.addEventListener("submit", async (event) => {
       event.preventDefault();
+      if (!error || !submit) return;
+      error.classList.add("hidden");
+      submit.textContent = "Отправляем код...";
+      submit.setAttribute("disabled", "disabled");
+
       const data = new FormData(form);
+      const payload = {
+        name:     String(data.get("name")     || "").trim(),
+        email:    String(data.get("email")    || "").trim(),
+        password: String(data.get("password") || ""),
+      };
+
       try {
-        localStorage.setItem("musictech.email", String(data.get("email") || ""));
-        localStorage.setItem("musictech.name",  String(data.get("name")  || ""));
-      } catch { /* noop */ }
-      // в реале тут будет POST /api/auth/register
-      const baseUrl = location.pathname.replace(/\/register\/?$/, "");
-      window.location.href = `${baseUrl}/login?welcome=1`;
+        const res = await fetch("/api/auth/register", {
+          method:  "POST",
+          headers: { "content-type": "application/json" },
+          body:    JSON.stringify(payload),
+        });
+        const body = await res.json();
+        if (!res.ok || !body?.ok) {
+          throw new Error(body?.error || `ошибка ${res.status}`);
+        }
+        sessionStorage.setItem("musictech.pending_email", payload.email);
+        sessionStorage.setItem("musictech.pending_name",  payload.name);
+        const baseUrl = location.pathname.replace(/\/register\/?$/, "");
+        window.location.href = `${baseUrl}/verify?email=${encodeURIComponent(payload.email)}`;
+      } catch (err) {
+        error.textContent = err.message;
+        error.classList.remove("hidden");
+        submit.textContent = "Отправить код на e-mail";
+        submit.removeAttribute("disabled");
+      }
     });
   </script>
 </Base>
