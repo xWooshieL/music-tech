@@ -1,0 +1,60 @@
+---
+const faqs = [
+  {
+    q: "Чем MusicTech отличается от Antescofo и Music Plus One?",
+    a: "Antescofo и MPO — закрытые коммерческие продукты с акцентом на профессиональные театры. MusicTech открыт, работает локально на обычном лэптопе и фокусируется на учебных репетициях. Плюс мы первыми пробуем RL-агент опережающего темпа поверх классического трекера — это новизна научной статьи.",
+  },
+  {
+    q: "Что делать если у меня нет MIDI-клавиатуры?",
+    a: "В бета-режиме работает микрофонный вход через onset-детектор + chroma. Качество ниже чем у MIDI, но для домашних репетиций достаточно. Релизный микрофонный вход планируется в 2026 году.",
+  },
+  {
+    q: "Это бесплатно?",
+    a: "Да, для частного и образовательного использования — навсегда. Если хотите использовать в концертном зале, консерватории или для коммерческого продукта — напишите нам, обсудим лицензию.",
+  },
+  {
+    q: "Поддерживаются ли мои пьесы?",
+    a: "Любая партитура в формате MIDI: одна .mid для солирующей партии + одна для оркестра. Импортёр midi_workspace.py разрежет ноты на аккорды, сохранит в score.json и подберёт гиперпараметры калибровкой. Концерты Рахманинова в 3791 state обрабатываются без проблем.",
+  },
+  {
+    q: "Какие данные собирает MusicTech?",
+    a: "Никакие. Всё работает локально: партитура, MIDI-события, метрики синхронизации. Сервер используется только для авторизации (имя пользователя, e-mail) и проверки лицензии. Подробности — в политике конфиденциальности.",
+  },
+  {
+    q: "Я хочу обучить RL-агента под свой стиль игры. Можно?",
+    a: "Да. Запишите 30–60 минут собственных репетиций, прогоните scripts/train_bc.py для behavior cloning на ваших данных, затем PPO finetune. Инструкция в docs/analysis.md. Это исследовательский путь — поддержка есть, но автоматизации пока нет.",
+  },
+];
+---
+
+<section id="faq" class="py-24 md:py-32">
+  <div class="container-soft">
+    <div class="reveal max-w-2xl mx-auto text-center">
+      <span class="pill">faq</span>
+      <h2 class="mt-4 font-display text-4xl md:text-5xl font-bold text-ink-900 tracking-tight">
+        Часто задаваемые вопросы
+      </h2>
+    </div>
+
+    <div class="reveal mt-12 max-w-3xl mx-auto space-y-3">
+      {faqs.map((f) => (
+        <details class="group rounded-2xl border border-ink-200 bg-white/70 backdrop-blur p-6 open:shadow-soft transition">
+          <summary class="cursor-pointer list-none flex items-start justify-between gap-4">
+            <span class="font-display font-semibold text-ink-900 text-base md:text-lg pr-4">{f.q}</span>
+            <span class="size-7 rounded-full bg-brand-50 border border-brand-200 grid place-items-center text-brand-700 shrink-0
+                         transition group-open:rotate-45">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            </span>
+          </summary>
+          <p class="mt-4 text-ink-600 leading-relaxed text-sm md:text-base">{f.a}</p>
+        </details>
+      ))}
+    </div>
+
+    <p class="reveal mt-12 text-center text-ink-500 text-sm">
+      Не нашли ответа?
+      <a href="mailto:hello@musictech.art" class="link font-medium">Напишите нам</a>
+    </p>
+  </div>
+</section>

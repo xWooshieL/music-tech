@@ -1,0 +1,50 @@
+---
+const steps = [
+  {
+    n: "01",
+    title: "Импортируйте партитуру",
+    text: "Загрузите .mid файл оркестра + ваших партий. MusicTech автоматически разрежет на аккорды, посчитает nominal_onset и nominal_duration, и подберёт гиперпараметры под пьесу.",
+    note: "midi_workspace.py · 1 команда CLI",
+  },
+  {
+    n: "02",
+    title: "Подключите MIDI-вход",
+    text: "Цифровое пианино, USB-клавиатура или MIDI-out из Logic Pro / Ableton. Все события note_on попадают в живой трекер ScoreFollower через mido без транспортных задержек.",
+    note: "MIDI input · 0–3 мс jitter",
+  },
+  {
+    n: "03",
+    title: "Играйте — оркестр играет с вами",
+    text: "Гибрид HSMM + OLTW локализует место в партитуре, TempoTracker берёт темп с медианой по окну, опционально RL-агент дотачивает темп на 200–500 мс вперёд. Оркестр звучит синхронно и с rubato.",
+    note: "20 мс end-to-end · sample-based рендер",
+  },
+];
+---
+
+<section id="how" class="relative py-24 md:py-32 bg-gradient-to-b from-white/0 via-ink-50/40 to-white/0">
+  <div class="container-soft">
+    <div class="reveal text-center max-w-2xl mx-auto">
+      <span class="pill">как это работает</span>
+      <h2 class="mt-4 font-display text-4xl md:text-5xl font-bold text-ink-900 tracking-tight">
+        Три шага от тишины до синхронного оркестра
+      </h2>
+    </div>
+
+    <ol class="mt-16 grid md:grid-cols-3 gap-6">
+      {steps.map((s, i) => (
+        <li class="reveal card relative" style={`transition-delay: ${i * 80}ms`}>
+          <div class="absolute -top-4 left-6 font-display text-7xl font-black text-brand-100 leading-none">
+            {s.n}
+          </div>
+          <div class="relative">
+            <h3 class="font-display font-bold text-xl text-ink-900 mt-8">{s.title}</h3>
+            <p class="mt-3 text-ink-600 leading-relaxed text-sm">{s.text}</p>
+            <div class="mt-5 inline-flex items-center gap-2 rounded-lg bg-ink-900/95 px-3 py-1.5 text-xs font-mono text-brand-300">
+              {s.note}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

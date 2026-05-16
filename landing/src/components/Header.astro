@@ -1,0 +1,52 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const nav = [
+  { href: "#features",    label: "Возможности"   },
+  { href: "#how",         label: "Как это работает" },
+  { href: "#download",    label: "Скачать"        },
+  { href: "#faq",         label: "FAQ"            },
+  { href: `${base}/about`,label: "О нас"          },
+];
+---
+
+<header class="sticky top-0 z-40 backdrop-blur border-b border-ink-200/60 bg-white/70">
+  <div class="container-soft flex h-16 items-center justify-between gap-6">
+    <a href={`${base}/`} class="flex items-center gap-2 group">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%"  stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#hg)" />
+        <path d="M11 9v10.2a3 3 0 1 1-2-2.83V9z" fill="#fff" />
+        <circle cx="22.5" cy="11" r="1.4" fill="#fff" />
+        <circle cx="22.5" cy="15" r="1.4" fill="#fff" />
+        <circle cx="22.5" cy="19" r="1.4" fill="#fff" />
+      </svg>
+      <span class="font-display text-lg font-bold tracking-tight text-ink-900 group-hover:text-brand-700 transition">
+        Music<span class="text-brand-500">Tech</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-700">
+      {nav.map((n) => (
+        <a href={n.href} class="hover:text-brand-700 transition">
+          {n.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href={`${base}/login`} class="btn-ghost hidden sm:inline-flex">Войти</a>
+      <a href="#download" class="btn-primary">
+        Скачать
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14" /><path d="M19 12l-7 7-7-7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>

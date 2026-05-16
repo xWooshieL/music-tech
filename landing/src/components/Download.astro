@@ -1,0 +1,96 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const builds = [
+  {
+    os: "Windows",
+    note: "Windows 10+ · 64-bit",
+    file: "MusicTech-Setup-1.0.0-win-x64.exe",
+    icon: "win",
+    primary: true,
+  },
+  {
+    os: "macOS",
+    note: "macOS 13+ · Universal",
+    file: "MusicTech-1.0.0-macos-universal.dmg",
+    icon: "mac",
+    primary: false,
+  },
+  {
+    os: "Linux",
+    note: "AppImage · x86_64",
+    file: "MusicTech-1.0.0-linux-x86_64.AppImage",
+    icon: "linux",
+    primary: false,
+  },
+];
+---
+
+<section id="download" class="relative py-24 md:py-32">
+  <div class="container-soft">
+    <div class="reveal max-w-3xl mx-auto text-center">
+      <span class="pill">скачать</span>
+      <h2 class="mt-4 font-display text-4xl md:text-5xl font-bold text-ink-900 tracking-tight">
+        Соберите свой виртуальный оркестр за 5&nbsp;минут
+      </h2>
+      <p class="mt-4 text-ink-600 text-lg">
+        Бесплатно для частного и образовательного использования. Подпишите
+        бинарник сертификатом, разверните в своём вузе или дома.
+      </p>
+    </div>
+
+    <div class="reveal mt-12 grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+      {builds.map((b) => (
+        <a
+          href={`${base}/api/download/${b.file}`}
+          class={
+            b.primary
+              ? "group rounded-2xl bg-ink-900 text-white p-6 shadow-glow hover:shadow-[0_0_0_1px_rgba(16,185,129,0.4),0_24px_64px_-16px_rgba(16,185,129,0.6)] transition relative overflow-hidden"
+              : "group card text-ink-800"
+          }
+        >
+          {b.primary && (
+            <div class="absolute top-4 right-4 pill bg-brand-500 text-white border-brand-400">
+              рекомендуется
+            </div>
+          )}
+          <div class={b.primary ? "size-11 rounded-xl bg-white/10 flex items-center justify-center" : "size-11 rounded-xl bg-brand-50 border border-brand-200 flex items-center justify-center text-brand-700"}>
+            {b.icon === "win" && (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5L11 4.4v7.7H3zm0 7.6h8v7.7L3 19.6zm9-9.4l9-1.2v9.6h-9zm0 9.4h9v9.5l-9-1.2z"/></svg>
+            )}
+            {b.icon === "mac" && (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 2c.2 1.6-.4 3-1.4 4-.9.9-2.3 1.7-3.7 1.6-.2-1.5.5-3 1.4-4 .9-1 2.4-1.7 3.7-1.6zm4.7 16.4c-.7 1.5-1 2.2-1.9 3.5-1.2 1.8-2.8 4-4.9 4-1.8.1-2.3-1.1-4.7-1.1-2.4 0-3 1.1-4.7 1.1-2 0-3.5-2-4.7-3.8-3-4.5-3.4-9.7-1.5-12.5 1.4-2 3.6-3.2 5.7-3.2 2.1 0 3.5 1.2 5.2 1.2 1.6 0 2.6-1.2 5.1-1.2 1.9 0 3.9 1 5.3 2.7-4.6 2.5-3.9 9.1.1 10.3z"/></svg>
+            )}
+            {b.icon === "linux" && (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1c-2 0-4 2-4 5v3c-1 1-3 4-3 7 0 4 3 7 7 7s7-3 7-7c0-3-2-6-3-7V6c0-3-2-5-4-5zm-1 6c.4 0 1 .6 1 1.4 0 .9-.6 1.6-1 1.6s-1-.7-1-1.6c0-.8.6-1.4 1-1.4zm3 .1c.4 0 .9.5.9 1.2 0 .9-.5 1.6-.9 1.6-.4 0-.8-.7-.8-1.6 0-.7.4-1.2.8-1.2zM12 11c1.5 0 3 1.5 3 2.5s-1.5.5-3 .5-3 .5-3-.5 1.5-2.5 3-2.5z"/></svg>
+            )}
+          </div>
+
+          <div class="mt-5 flex items-center justify-between">
+            <h3 class={b.primary ? "font-display font-bold text-2xl" : "font-display font-bold text-2xl text-ink-900"}>
+              {b.os}
+            </h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="opacity-60 group-hover:opacity-100 group-hover:translate-y-0.5 transition" aria-hidden="true">
+              <path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/>
+            </svg>
+          </div>
+          <div class={b.primary ? "mt-1 text-sm text-white/70" : "mt-1 text-sm text-ink-500"}>
+            {b.note}
+          </div>
+          <div class={b.primary ? "mt-3 text-xs font-mono text-white/60" : "mt-3 text-xs font-mono text-ink-500"}>
+            {b.file}
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <p class="reveal mt-8 text-center text-sm text-ink-500">
+      Предпочитаете запустить из исходников?
+      <a href="https://github.com/Nizier193/music-tech" class="link font-medium">Сборка с GitHub</a>
+      &nbsp;·&nbsp;
+      <a href={`${base}/about`} class="link font-medium">О команде</a>
+    </p>
+  </div>
+</section>

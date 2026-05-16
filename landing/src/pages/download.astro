@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import Download from "../components/Download.astro";
+---
+
+<Base title="Скачать MusicTech — Windows / macOS / Linux">
+  <Download />
+
+  <section class="container-soft pb-24">
+    <div class="reveal max-w-3xl mx-auto card">
+      <h2 class="font-display text-2xl font-bold text-ink-900">Что внутри установщика</h2>
+      <ul class="mt-4 space-y-2 text-sm text-ink-700">
+        <li class="flex gap-2"><span class="text-brand-500">→</span> Движок score-following (HMM + OLTW + Hybrid) на чистом numpy</li>
+        <li class="flex gap-2"><span class="text-brand-500">→</span> Скелет RL-агента темпа (MLPPolicy + reward + env)</li>
+        <li class="flex gap-2"><span class="text-brand-500">→</span> 4 синтетических пьесы для смок-теста</li>
+        <li class="flex gap-2"><span class="text-brand-500">→</span> Импортёр MIDI → score.json одной командой</li>
+        <li class="flex gap-2"><span class="text-brand-500">→</span> Sample-based оркестровый рендер (Philharmonia Strings)</li>
+        <li class="flex gap-2"><span class="text-brand-500">→</span> Открытый исходник, можно собрать самому</li>
+      </ul>
+
+      <p class="mt-6 text-xs text-ink-500">
+        Установщик подписан GPG-ключом команды. SHA256-хеши и подпись опубликованы рядом с релизом
+        в <a href="https://github.com/Nizier193/music-tech/releases" class="link">GitHub Releases</a>.
+      </p>
+    </div>
+  </section>
+</Base>

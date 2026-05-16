@@ -1,0 +1,102 @@
+---
+import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Base
+  title="Регистрация — MusicTech"
+  description="Создайте аккаунт MusicTech — один логин для сайта и десктопного приложения."
+>
+  <section class="container-soft py-20 md:py-28">
+    <div class="reveal mx-auto max-w-md">
+      <div class="text-center mb-8">
+        <span class="pill">регистрация</span>
+        <h1 class="mt-4 font-display text-4xl font-bold text-ink-900 tracking-tight">
+          Создать аккаунт
+        </h1>
+        <p class="mt-2 text-ink-600">
+          Бесплатно для частного и образовательного использования.
+        </p>
+      </div>
+
+      <form id="reg-form" class="card space-y-5">
+        <label class="block">
+          <span class="block text-sm font-semibold text-ink-800 mb-1.5">Имя</span>
+          <input
+            name="name"
+            type="text"
+            required
+            minlength="2"
+            placeholder="Никита Новицкий"
+            class="w-full rounded-xl border border-ink-200 px-4 py-3 text-sm
+                   bg-white focus:border-brand-500 focus:ring focus:ring-brand-100
+                   outline-none transition"
+          />
+        </label>
+
+        <label class="block">
+          <span class="block text-sm font-semibold text-ink-800 mb-1.5">E-mail</span>
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="you@example.com"
+            class="w-full rounded-xl border border-ink-200 px-4 py-3 text-sm
+                   bg-white focus:border-brand-500 focus:ring focus:ring-brand-100
+                   outline-none transition"
+          />
+        </label>
+
+        <label class="block">
+          <span class="block text-sm font-semibold text-ink-800 mb-1.5">Пароль</span>
+          <input
+            name="password"
+            type="password"
+            required
+            minlength="8"
+            placeholder="••••••••"
+            class="w-full rounded-xl border border-ink-200 px-4 py-3 text-sm
+                   bg-white focus:border-brand-500 focus:ring focus:ring-brand-100
+                   outline-none transition"
+          />
+          <span class="block mt-1.5 text-xs text-ink-500">
+            минимум 8 символов, рекомендуем менеджер паролей
+          </span>
+        </label>
+
+        <label class="flex items-start gap-2 text-sm text-ink-600 select-none">
+          <input type="checkbox" name="terms" required class="mt-0.5 size-4 accent-brand-500" />
+          <span>
+            я принимаю
+            <a href={`${base}/terms`} class="link">условия использования</a>
+            и
+            <a href={`${base}/privacy`} class="link">политику конфиденциальности</a>
+          </span>
+        </label>
+
+        <button type="submit" class="btn-primary w-full text-base py-3.5">
+          Создать аккаунт
+        </button>
+      </form>
+
+      <p class="mt-6 text-center text-sm text-ink-500">
+        Уже есть аккаунт? <a href={`${base}/login`} class="link font-medium">Войти</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById("reg-form") as HTMLFormElement | null;
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      try {
+        localStorage.setItem("musictech.email", String(data.get("email") || ""));
+        localStorage.setItem("musictech.name",  String(data.get("name")  || ""));
+      } catch { /* noop */ }
+      // в реале тут будет POST /api/auth/register
+      const baseUrl = location.pathname.replace(/\/register\/?$/, "");
+      window.location.href = `${baseUrl}/login?welcome=1`;
+    });
+  </script>
+</Base>

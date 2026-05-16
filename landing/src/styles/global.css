@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------------------- */
+/* base */
+/* --------------------------------------------------------------- */
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    background:
+      radial-gradient(80% 60% at 50% -10%, rgba(16,185,129,0.10) 0%, rgba(16,185,129,0) 60%),
+      radial-gradient(60% 40% at 90% 30%, rgba(99,102,241,0.08) 0%, rgba(99,102,241,0) 60%),
+      #fbfdfc;
+  }
+
+  body {
+    @apply text-ink-800 font-sans antialiased min-h-screen;
+  }
+
+  ::selection {
+    background: rgba(16, 185, 129, 0.20);
+    color: #022c22;
+  }
+
+  /* Tasteful focus rings on the green palette */
+  :focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* components */
+/* --------------------------------------------------------------- */
+
+@layer components {
+  .container-soft {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3
+           text-sm font-semibold transition duration-200
+           focus:outline-none;
+  }
+
+  .btn-primary {
+    @apply btn text-white bg-brand-500 hover:bg-brand-600
+           shadow-glow hover:shadow-[0_0_0_1px_rgba(16,185,129,0.4),0_20px_56px_-16px_rgba(16,185,129,0.6)]
+           active:translate-y-px;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink-700 bg-white/70 backdrop-blur
+           border border-ink-200 hover:border-brand-400 hover:text-brand-700
+           shadow-soft;
+  }
+
+  .btn-dark {
+    @apply btn text-white bg-ink-900 hover:bg-ink-800
+           active:translate-y-px;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1
+           text-xs font-medium text-brand-700 bg-brand-50
+           border border-brand-200;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white/70 backdrop-blur border border-ink-200
+           p-6 shadow-soft transition hover:shadow-glow
+           hover:-translate-y-0.5 hover:border-brand-200;
+  }
+
+  .link {
+    @apply text-brand-700 hover:text-brand-800 underline-offset-4 hover:underline;
+  }
+
+  /* появление при попадании в вьюпорт - JS добавит класс .is-visible
+     если JS выключен или ещё не успел загрузиться - всё видно сразу,
+     класс js-ready на html включает скрытие */
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js-ready .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .7s ease-out, transform .7s ease-out;
+  }
+  html.js-ready .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* utility background blobs */
+/* --------------------------------------------------------------- */
+
+.blob {
+  position: absolute;
+  filter: blur(60px);
+  opacity: .55;
+  pointer-events: none;
+  border-radius: 999px;
+  animation: blob 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .blob { animation: none; }
+}

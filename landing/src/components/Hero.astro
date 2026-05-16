@@ -1,0 +1,103 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<section class="relative">
+  <div class="container-soft py-20 md:py-28 lg:py-32">
+    <div class="reveal mx-auto max-w-4xl text-center">
+      <span class="pill">
+        <span class="size-2 rounded-full bg-brand-500 animate-pulse"></span>
+        Open-source • Realtime • Локально на CPU
+      </span>
+
+      <h1 class="mt-6 font-display text-5xl md:text-7xl font-extrabold tracking-tight text-ink-900 leading-[1.05]">
+        Виртуальный оркестр,<br />
+        который <span class="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">слушает</span> солиста
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-ink-600 max-w-2xl mx-auto leading-relaxed">
+        MusicTech следит за партитурой в реальном времени и подстраивает темп
+        оркестрового сопровождения под живое исполнение. HMM, OLTW, гибрид и
+        RL-агент опережающего темпа — всё это работает локально на одном CPU
+        с задержкой до 20&nbsp;мс.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <a href="#download" class="btn-primary text-base px-7 py-4">
+          Скачать MusicTech
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14" /><path d="M19 12l-7 7-7-7" />
+          </svg>
+        </a>
+        <a href={`${base}/login`} class="btn-ghost text-base px-7 py-4">
+          Войти в аккаунт
+        </a>
+      </div>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-ink-500">
+        <span class="flex items-center gap-1.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Windows · macOS · Linux
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          MIDI + микрофон (β)
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Без облака — данные не покидают компьютер
+        </span>
+      </div>
+    </div>
+
+    <!-- showcase card -->
+    <div class="reveal mt-20 mx-auto max-w-5xl">
+      <div class="relative rounded-3xl border border-ink-200 bg-white/80 backdrop-blur shadow-soft overflow-hidden">
+        <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-ink-100/60 to-transparent flex items-center px-4 gap-1.5">
+          <span class="size-2.5 rounded-full bg-red-400"></span>
+          <span class="size-2.5 rounded-full bg-amber-400"></span>
+          <span class="size-2.5 rounded-full bg-emerald-400"></span>
+          <span class="ml-3 text-xs text-ink-500 font-mono">MusicTech — Rachmaninoff Concerto №2, 3791 state</span>
+        </div>
+
+        <div class="pt-14 pb-8 px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- waveform / piano -->
+          <div class="md:col-span-2">
+            <div class="text-xs uppercase tracking-wider text-ink-500 mb-2">live MIDI</div>
+            <div class="h-24 rounded-xl bg-ink-900/95 p-3 flex items-end gap-[2px] overflow-hidden">
+              {Array.from({ length: 72 }).map((_, i) => {
+                const h = 18 + Math.abs(Math.sin(i / 4) * 60);
+                return <div class="flex-1 rounded-t bg-brand-400/85" style={`height: ${h}%`}></div>;
+              })}
+            </div>
+            <div class="mt-2 flex justify-between text-xs text-ink-500 font-mono">
+              <span>t = 14.220 s</span>
+              <span>tempo_ratio = 1.04×</span>
+              <span>confidence = 0.92</span>
+            </div>
+          </div>
+
+          <!-- status panel -->
+          <div class="space-y-3">
+            <div class="rounded-xl bg-brand-50 border border-brand-200 p-3">
+              <div class="text-xs text-brand-700 font-semibold">SCORE STATE</div>
+              <div class="text-2xl font-bold text-brand-900 mt-0.5">1 247 / 3791</div>
+              <div class="text-xs text-brand-700 mt-0.5">HSMM + OLTW + anchor</div>
+            </div>
+            <div class="rounded-xl bg-ink-50 border border-ink-200 p-3">
+              <div class="text-xs text-ink-500 font-semibold">RL-AGENT</div>
+              <div class="text-2xl font-bold text-ink-900 mt-0.5">+220 ms</div>
+              <div class="text-xs text-ink-500 mt-0.5">опережающий темп</div>
+            </div>
+            <div class="rounded-xl bg-ink-900 text-white p-3">
+              <div class="text-xs text-white/70 font-semibold">LATENCY</div>
+              <div class="text-2xl font-bold mt-0.5">8.4 ms</div>
+              <div class="text-xs text-white/60 mt-0.5">бюджет 20 ms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

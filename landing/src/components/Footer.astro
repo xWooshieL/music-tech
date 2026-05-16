@@ -1,0 +1,109 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const links = {
+  product: [
+    { href: `${base}/`,              label: "Главная"      },
+    { href: `${base}/download`,      label: "Скачать"      },
+    { href: `${base}/about`,         label: "О команде"    },
+    { href: "https://github.com/Nizier193/music-tech",         label: "GitHub"       },
+    { href: "https://github.com/Nizier193/music-tech/blob/master/article/main.pdf", label: "Научная статья" },
+  ],
+  account: [
+    { href: `${base}/login`,    label: "Войти"          },
+    { href: `${base}/register`, label: "Регистрация"    },
+    { href: "mailto:support@musictech.art", label: "Поддержка" },
+  ],
+  legal: [
+    { href: `${base}/privacy`, label: "Политика конфиденциальности" },
+    { href: `${base}/terms`,   label: "Условия использования"        },
+    { href: `${base}/license`, label: "Лицензионное соглашение"      },
+    { href: `${base}/dmca`,    label: "DMCA / нарушения авторских прав" },
+  ],
+  research: [
+    { href: "https://github.com/Nizier193/music-tech/blob/master/article/main.pdf",                label: "Статья (PDF)" },
+    { href: "https://github.com/Nizier193/music-tech/blob/master/article/тезисы.pdf",              label: "Тезисы" },
+    { href: "https://github.com/Nizier193/music-tech/blob/master/article/presentation/presentation.pdf", label: "Презентация" },
+    { href: "https://github.com/Nizier193/music-tech/blob/master/ScoreFollowing.pdf",              label: "Методичка" },
+  ],
+};
+---
+
+<footer class="relative mt-32 border-t border-ink-200 bg-white/60 backdrop-blur">
+  <div class="container-soft py-16">
+    <div class="grid gap-10 md:grid-cols-5">
+      <div class="md:col-span-2">
+        <a href={`${base}/`} class="flex items-center gap-2">
+          <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"  stop-color="#34d399"/>
+                <stop offset="100%" stop-color="#059669"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#fg)" />
+            <path d="M11 9v10.2a3 3 0 1 1-2-2.83V9z" fill="#fff"/>
+            <circle cx="22.5" cy="11" r="1.4" fill="#fff"/>
+            <circle cx="22.5" cy="15" r="1.4" fill="#fff"/>
+            <circle cx="22.5" cy="19" r="1.4" fill="#fff"/>
+          </svg>
+          <span class="font-display text-lg font-bold tracking-tight text-ink-900">
+            Music<span class="text-brand-500">Tech</span>
+          </span>
+        </a>
+        <p class="mt-4 text-sm text-ink-600 max-w-sm leading-relaxed">
+          Виртуальный оркестр в реальном времени. Команда мастерской MusicTech
+          Центрального Университета, мы делаем open-source инструмент для
+          репетиций с виртуальным оркестром.
+        </p>
+        <div class="mt-4 flex items-center gap-3">
+          <a href="https://github.com/Nizier193/music-tech" aria-label="GitHub" class="size-9 grid place-items-center rounded-lg border border-ink-200 hover:bg-ink-900 hover:text-white hover:border-ink-900 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.95.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.15 0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+          </a>
+          <a href="mailto:hello@musictech.art" aria-label="email" class="size-9 grid place-items-center rounded-lg border border-ink-200 hover:bg-ink-900 hover:text-white hover:border-ink-900 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+          </a>
+          <a href="https://t.me/musictech_art" aria-label="Telegram" class="size-9 grid place-items-center rounded-lg border border-ink-200 hover:bg-ink-900 hover:text-white hover:border-ink-900 transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.85l-3 14.16c-.22 1-.83 1.24-1.68.77l-4.64-3.42-2.24 2.15c-.25.25-.46.46-.94.46l.34-4.8 8.74-7.9c.38-.34-.08-.53-.59-.19l-10.8 6.8-4.66-1.46c-1.01-.31-1.03-1.01.21-1.49l18.21-7.02c.84-.31 1.58.2 1.31 1.39z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-3">Продукт</div>
+        <ul class="space-y-2 text-sm text-ink-700">
+          {links.product.map((l) => <li><a href={l.href} class="hover:text-brand-700">{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-3">Аккаунт</div>
+        <ul class="space-y-2 text-sm text-ink-700">
+          {links.account.map((l) => <li><a href={l.href} class="hover:text-brand-700">{l.label}</a></li>)}
+        </ul>
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mt-6 mb-3">Документы</div>
+        <ul class="space-y-2 text-sm text-ink-700">
+          {links.research.map((l) => <li><a href={l.href} class="hover:text-brand-700">{l.label}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-3">Юридическое</div>
+        <ul class="space-y-2 text-sm text-ink-700">
+          {links.legal.map((l) => <li><a href={l.href} class="hover:text-brand-700">{l.label}</a></li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-ink-200 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-ink-500">
+      <div>
+        © 2026 MusicTech · Команда мастерской Центрального Университета (Т-Банк)
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="size-2 rounded-full bg-brand-500 animate-pulse"></span>
+        сервис работает штатно ·
+        <a href="https://github.com/Nizier193/music-tech/commits/master" class="link">обновления</a>
+      </div>
+    </div>
+  </div>
+</footer>
