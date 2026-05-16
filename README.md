@@ -75,13 +75,14 @@ music-tech/
 └── src/                     ← исследовательский код + MVP приложение
     ├── README.md            ← пояснение, что внутри
     └── musictech-app/       ← standalone приложение для score-following
-        ├── README.md
-        ├── ARCHITECTURE.md       ← слои, DTO, граф зависимостей
-        ├── CODE_MAP.md           ← карта файлов с описанием каждого
-        ├── PROJECT_ANALYSIS.md   ← состояние / зависимости / что чинить
-        ├── analysis.md           ← план RL-агента и приоритеты задач
-        ├── start.md              ← как запустить interactive_tester
+        ├── README.md            ← точка входа в код MVP
+        ├── start.md             ← как запустить interactive_tester
         ├── requirements.txt
+        ├── docs/                ← вся документация
+        │   ├── ARCHITECTURE.md  ← слои, DTO, граф зависимостей
+        │   ├── CODE_MAP.md      ← карта файлов с описанием каждого
+        │   ├── PROJECT_ANALYSIS.md
+        │   └── analysis.md      ← план RL-агента
         ├── musictech/            ← Python-пакет (12 подпакетов, 30+ модулей)
         │   ├── core/followers/   ← HMM, HSMM, OLTW, Hybrid (pure-numpy)
         │   ├── playback/         ← TempoTracker, dispatcher, orchestra
@@ -133,10 +134,11 @@ music-tech/
 ### Приложение / код
 
 - [src/musictech-app/](src/musictech-app/) — корень MVP.
-- [ARCHITECTURE.md](src/musictech-app/ARCHITECTURE.md) — слои и DTO.
-- [CODE_MAP.md](src/musictech-app/CODE_MAP.md) — карта всех Python-модулей.
-- [PROJECT_ANALYSIS.md](src/musictech-app/PROJECT_ANALYSIS.md) — что есть, что чинить.
-- [start.md](src/musictech-app/start.md) — как запустить GUI.
+- [start.md](src/musictech-app/start.md) — как запустить GUI за 5 команд.
+- [docs/ARCHITECTURE.md](src/musictech-app/docs/ARCHITECTURE.md) — слои и DTO.
+- [docs/CODE_MAP.md](src/musictech-app/docs/CODE_MAP.md) — карта всех Python-модулей.
+- [docs/PROJECT_ANALYSIS.md](src/musictech-app/docs/PROJECT_ANALYSIS.md) — состояние и план фиксов.
+- [docs/analysis.md](src/musictech-app/docs/analysis.md) — приоритеты задач по RL.
 
 ---
 
@@ -209,7 +211,7 @@ python interactive_tester.py --launcher
    [`article/docs/datasets.md`](article/docs/datasets.md).
 5. Поставить стек по [`article/docs/tools.md`](article/docs/tools.md).
 6. Зайти в [`src/musictech-app/`](src/musictech-app/) и прочитать
-   [`ARCHITECTURE.md`](src/musictech-app/ARCHITECTURE.md) +
-   [`CODE_MAP.md`](src/musictech-app/CODE_MAP.md) — это карта по всему
+   [`docs/ARCHITECTURE.md`](src/musictech-app/docs/ARCHITECTURE.md) +
+   [`docs/CODE_MAP.md`](src/musictech-app/docs/CODE_MAP.md) — это карта по всему
    коду MVP.
 7. Открыть свой раздел статьи в `article/sections/` и начать работу.
