@@ -17,6 +17,7 @@ import {
   normalizeEmail,
   rateLimit,
   redis,
+  roleOf,
   saveUser,
 } from "../../../lib/auth";
 
@@ -83,17 +84,28 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // успех: создаём пользователя, удаляем pending
+    const createdAt = Date.now();
     await saveUser({
       email,
       name: pending.name,
       pwdHash: pending.pwdHash,
-      createdAt: Date.now(),
+      createdAt,
       plan: "open-beta",
     });
     await r.del(k.pending(email));
 
     const token = await issueToken(email, pending.name);
-    return json({ ok: true, token, name: pending.name }, 200, sessionCookie(token));
+    return json({
+      ok: true,
+      token,
+      user: {
+        email,
+        name:      pending.name,
+        plan:      "open-beta",
+        role:      roleOf(email),
+        createdAt,
+      },
+    }, 200, sessionCookie(token));
   } catch (err: any) {
     console.error("verify error:", err?.message ?? err);
     return json({ ok: false, error: "внутренняя ошибка, попробуйте позже" }, 500);

@@ -11,12 +11,12 @@
 import type { APIRoute } from "astro";
 import {
   buildSessionCookie,
+  getUser,
   isValidEmail,
   issueToken,
-  k,
   normalizeEmail,
   rateLimit,
-  redis,
+  roleOf,
   verifyPassword,
 } from "../../../lib/auth";
 
@@ -46,10 +46,7 @@ export const POST: APIRoute = async ({ request }) => {
       }, 429);
     }
 
-    const r = redis();
-    const user = (await r.get(k.user(email))) as
-      | { email: string; name: string; pwdHash: string }
-      | null;
+    const user = await getUser(email);
     if (!user) {
       return json({ ok: false, error: "неверный e-mail или пароль" }, 401);
     }
@@ -60,7 +57,17 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const token = await issueToken(email, user.name);
-    return json({ ok: true, token, name: user.name }, 200, sessionCookie(token));
+    return json({
+      ok: true,
+      token,
+      user: {
+        email:     user.email,
+        name:      user.name,
+        plan:      user.plan ?? "open-beta",
+        role:      roleOf(user.email),
+        createdAt: user.createdAt,
+      },
+    }, 200, sessionCookie(token));
   } catch (err: any) {
     console.error("login error:", err?.message ?? err);
     return json({ ok: false, error: "внутренняя ошибка, попробуйте позже" }, 500);
